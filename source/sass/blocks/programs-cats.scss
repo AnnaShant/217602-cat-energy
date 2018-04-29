@@ -1,0 +1,186 @@
+.programs-cats__box {
+  position: relative;
+
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+  background-color: #f2f2f2;
+}
+
+.programs-cats__wrap {
+  padding: 0 40px;
+}
+
+.programs-cats__img {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    left: 40px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: $color-btn;
+
+    border-radius: 50%;
+  }
+}
+
+.programs-cats__svg {
+  position: absolute;
+  z-index: 2;
+
+  &--slim {
+    top: 17px;
+    left: 50px;
+  }
+
+  &--pro {
+    top: 30px;
+    left: 30px;
+  }
+}
+
+.programs-cats__title {
+  margin-left: 74px;
+
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.programs-cats__text {
+  padding-bottom: 20px;
+
+  font-family: $font-arial;
+  font-size: 14px;
+  text-transform: none;
+  color: #444444;
+
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.programs-cats__link {
+  position: relative;
+
+  line-height: 1;
+  color: #000000;
+  text-decoration: none;
+}
+
+@media #{$tablet-widths} {
+  .programs-cats__box {
+    margin-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  .programs-cats__wrap {
+    margin: 0;
+    margin-left: 25px;
+  }
+
+  .programs-cats__title {
+    margin-left: 0;
+
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .programs-cats__text {
+    width: 380px;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    border: none;
+  }
+
+  .programs-cats__img {
+    &::after {
+      top: 94px;
+      left: 500px;
+
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .programs-cats__svg {
+    position: absolute;
+    z-index: 2;
+
+    &--slim {
+      top: 82px;
+      left: 530px;
+
+      width: 140px;
+      height: 194px;
+    }
+
+    &--pro {
+      top: 135px;
+      left: 456px;
+
+      width: 269px;
+      height: 112px;
+    }
+  }
+
+  .programs-cats__link {
+    font-size: 20px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .programs-cats {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+  }
+
+  .programs-cats__box {
+    flex-basis: 30%;
+
+    padding-bottom: 95px;
+  }
+
+  .programs-cats__title {
+    margin-left: 150px;
+  }
+
+  .programs-cats__text {
+    width: 464px;
+  }
+
+  .programs-cats__img {
+    &::after {
+      top: 50px;
+      left: 50px;
+
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .programs-cats__svg {
+    &--slim {
+      top: 43px;
+      left: 64px;
+
+      width: 72px;
+      height: 97px;
+    }
+
+    &--pro {
+      top: 69px;
+      left: 34px;
+
+      width: 134px;
+      height: 56px;
+    }
+  }
+}

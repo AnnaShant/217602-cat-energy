@@ -6,7 +6,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page">
-    <header class="page-header">
+    <header class="page-header container">
       <div class="page-header__logo logo">
         <a class="logo__link" href="index.html">
           <img class="logo__img" src="img/logo-mobile.svg" alt="Logo Cat Energy" width="200" height="38">
@@ -15,40 +15,39 @@
 
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-        <div class="main-nav__wrap">
-          <ul class="main-nav__items menu-list">
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="index.html">Главная</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="menu-list__item menu-list__item--active">
-              <a class="menu-list__link">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-nav__items menu-list">
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link menu-list__link--active">Подбор программы</a>
+          </li>
+        </ul>
       </nav>
 
     </header>
 
     <main class="page-main">
-      <h1 class="page-main__title">Подбор программы</h1>
-      <p class="page-main__text">Заполните анкету и&nbsp;мы&nbsp;подберем программу питания для вашего кота</p>
+      <div class="container">
+        <h1 class="page-main__title">Подбор программы</h1>
+        <p class="page-main__text">Заполните анкету и&nbsp;мы&nbsp;подберем программу питания для вашего кота</p>
 
-      <form class="form" method="post" action="https://echo.htmlacademy.ru">
+        <form class="form" method="post" action="https://echo.htmlacademy.ru">
         <fieldset class="form__cat-data form-cat-data">
-          <div class="form__wrap form-cat-data__wrap">
+          <div class="form__wrap">
             <label for="cat-data-name">Имя:*</label>
             <input type="text" id="cat-data-name" name="cat-data-name" placeholder="Барсик">
           </div>
 
-          <div class="form__wrap form-cat-data__wrap">
+          <div class="form__wrap">
             <label for="cat-data-weight">Вес(кг):*</label>
             <input type="number" id="cat-data-weight" name="cat-data-weight" placeholder="7">
           </div>
 
-          <div class="form__wrap form-cat-data__wrap">
+          <div class="form__wrap">
             <label for="cat-data-age">Возраст(лет):*</label>
             <input type="number" id="cat-data-age" name="cat-data-age" placeholder="7">
           </div>
@@ -76,12 +75,12 @@
         <fieldset class="form__contact form-contact">
           <legend class="form__title form-contact__title">Контактные данные (владельца кота)</legend>
 
-          <div class="form__wrap form-contact__wrap">
+          <div class="form__wrap">
             <label for="contact-email">E-mail:*</label>
             <input type="email" id="contact-email" name="contact-email" placeholder="kuklachev@gmail.com">
           </div>
 
-          <div class="form__wrap form-contact__wrap">
+          <div class="form__wrap">
             <label for="contact-tel">Телефон:*</label>
             <input type="tel" id="contact-tel" name="contact-tel" placeholder="8 (960) 900-60-90">
           </div>
@@ -121,6 +120,7 @@
         <button class="form__btn btn-block" type="submit">Отправить заявку</button>
         <p class="form__text">* &mdash; Обязательные поля</p>
       </form>
+      </div>
 
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>

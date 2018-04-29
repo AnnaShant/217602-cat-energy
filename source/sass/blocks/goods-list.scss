@@ -1,11 +1,9 @@
 .goods-list {
-  @include list-clear();
+  @include reset-list();
 
   margin: 40px 0;
 
   border-top: 1px solid #e6e6e6;
-
-  box-sizing: border-box;
 }
 
 .goods-list__item {

@@ -22,3 +22,11 @@
   text-transform: none;
   color: #444444;
 }
+
+@media #{$tablet-widths} {
+  .product {
+    width: 324px;
+
+    border: none;
+  }
+}
