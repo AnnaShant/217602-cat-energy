@@ -29,3 +29,18 @@
   text-transform: none;
   color: #444444;
 }
+
+@media #{$desktop-widths} {
+  .goods-list {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .goods-list__item {
+    display: flex;
+    align-items: flex-start;
+
+    width: 895px;
+  }
+}

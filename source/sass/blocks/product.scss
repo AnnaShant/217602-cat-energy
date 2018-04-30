@@ -30,3 +30,9 @@
     border: none;
   }
 }
+
+@media #{$desktop-widths} {
+  .product {
+    width: 245px;
+  }
+}

@@ -95,6 +95,10 @@
   border: none;
 }
 
+.form-comment textarea {
+  width: 100%;
+}
+
 .form-cat-data {
   padding: 0 20px;
 
@@ -113,4 +117,46 @@
 
 .form-additionally__item {
   margin-bottom: 20px;
+}
+
+@media #{$tablet-widths} {
+  .form-additionally__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form-additionally__item {
+    width: 324px;
+  }
+
+  .form__btn-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form .form__btn {
+    width: auto;
+    padding: 10px 65px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .form__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-cat-data,
+  .form__option {
+    width: 570px;
+  }
+
+  .form-additionally__item {
+    width: 245px;
+  }
+
+  .form__btn-wrap {
+    justify-content: flex-start;
+  }
 }

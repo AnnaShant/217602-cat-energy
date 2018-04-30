@@ -36,53 +36,57 @@
         <p class="page-main__text">Заполните анкету и&nbsp;мы&nbsp;подберем программу питания для вашего кота</p>
 
         <form class="form" method="post" action="https://echo.htmlacademy.ru">
-        <fieldset class="form__cat-data form-cat-data">
-          <div class="form__wrap">
-            <label for="cat-data-name">Имя:*</label>
-            <input type="text" id="cat-data-name" name="cat-data-name" placeholder="Барсик">
-          </div>
+        <div class="form__box">
+          <fieldset class="form__cat-data form-cat-data">
+            <div class="form__wrap">
+              <label for="cat-data-name">Имя:*</label>
+              <input type="text" id="cat-data-name" name="cat-data-name" placeholder="Барсик">
+            </div>
 
-          <div class="form__wrap">
-            <label for="cat-data-weight">Вес(кг):*</label>
-            <input type="number" id="cat-data-weight" name="cat-data-weight" placeholder="7">
-          </div>
+            <div class="form__wrap">
+              <label for="cat-data-weight">Вес(кг):*</label>
+              <input type="number" id="cat-data-weight" name="cat-data-weight" placeholder="7">
+            </div>
 
-          <div class="form__wrap">
-            <label for="cat-data-age">Возраст(лет):*</label>
-            <input type="number" id="cat-data-age" name="cat-data-age" placeholder="7">
-          </div>
-        </fieldset>
+            <div class="form__wrap">
+              <label for="cat-data-age">Возраст(лет):*</label>
+              <input type="number" id="cat-data-age" name="cat-data-age" placeholder="7">
+            </div>
+          </fieldset>
 
-        <fieldset class="form__option form-option">
-          <ul class="form-option__list">
-            <li class="form-option__item">
-              <input type="radio" id="option-slim" name="option-slim" checked>
-              <label for="option-slim">Похудение</label>
-            </li>
+          <fieldset class="form__option form-option">
+            <ul class="form-option__list">
+              <li class="form-option__item">
+                <input type="radio" id="option-slim" name="option-slim" checked>
+                <label for="option-slim">Похудение</label>
+              </li>
 
-            <li class="form-option__item">
-              <input type="radio" id="option-pro" name="option-pro">
-              <label for="option-pro">Набор массы</label>
-            </li>
+              <li class="form-option__item">
+                <input type="radio" id="option-pro" name="option-pro">
+                <label for="option-pro">Набор массы</label>
+              </li>
 
-            <li class="form-option__item">
-              <input type="radio" id="option-need" name="option-need">
-              <label for="option-need">Не&nbsp;знаю (нужен ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
+              <li class="form-option__item">
+                <input type="radio" id="option-need" name="option-need">
+                <label for="option-need">Не&nbsp;знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
 
         <fieldset class="form__contact form-contact">
           <legend class="form__title form-contact__title">Контактные данные (владельца кота)</legend>
 
-          <div class="form__wrap">
-            <label for="contact-email">E-mail:*</label>
-            <input type="email" id="contact-email" name="contact-email" placeholder="kuklachev@gmail.com">
-          </div>
+          <div class="form__box">
+            <div class="form__wrap">
+              <label for="contact-email">E-mail:*</label>
+              <input type="email" id="contact-email" name="contact-email" placeholder="kuklachev@gmail.com">
+            </div>
 
-          <div class="form__wrap">
-            <label for="contact-tel">Телефон:*</label>
-            <input type="tel" id="contact-tel" name="contact-tel" placeholder="8 (960) 900-60-90">
+            <div class="form__wrap">
+              <label for="contact-tel">Телефон:*</label>
+              <input type="tel" id="contact-tel" name="contact-tel" placeholder="8 (960) 900-60-90">
+            </div>
           </div>
         </fieldset>
 
@@ -117,8 +121,10 @@
           </ul>
         </fieldset>
 
-        <button class="form__btn btn-block" type="submit">Отправить заявку</button>
-        <p class="form__text">* &mdash; Обязательные поля</p>
+        <div class="form__btn-wrap">
+          <button class="form__btn btn-block" type="submit">Отправить заявку</button>
+          <p class="form__text">* &mdash; Обязательные поля</p>
+        </div>
       </form>
       </div>
 
@@ -133,8 +139,8 @@
       </section>
     </main>
 
-    <footer class="page-footer container">
-      <div class="page-footer__wrap">
+    <footer class="page-footer">
+      <div class="page-footer__wrap container">
         <a class="page-footer__logo footer-logo">
           <img class="footer-logo__name" src="img/logo-footer.svg" alt="Logo" width="100" height="18">
         </a>
