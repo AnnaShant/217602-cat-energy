@@ -1,0 +1,86 @@
+.additional__title {
+  position: relative;
+
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+
+    height: 5px;
+    width: 5000px;
+
+    background-color: $color-btn;
+  }
+
+  &::before {
+    right: 100%;
+  }
+
+  &::after {
+    left: 80%;
+  }
+}
+
+.additional__all {
+  margin: 0 auto;
+  padding-top: 65px;
+  padding-bottom: 47px;
+
+  background-color: $color-btn;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.additional__all-image {
+  margin-left: 115px;
+  margin-bottom: 65px;
+}
+
+.additional__all-text {
+  width: 165px;
+
+  margin-left: 60px;
+
+  font-family: $font-arial;
+  text-transform: none;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media #{$tablet-widths} {
+  .additional__all {
+    display: flex;
+    justify-content: space-around;
+
+    width: 245px;
+    margin-top: 40px;
+  }
+
+  .additional__title {
+    font-size: 36px;
+
+    &::after {
+      left: 50%;
+    }
+  }
+}
+
+@media #{$desktop-widths} {
+  .additional__wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .additional__title {
+    &::after {
+      left: 28%;
+    }
+  }
+}

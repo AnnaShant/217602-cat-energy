@@ -3,16 +3,14 @@
 }
 
 .programs-work__list {
-  @include list-clear();
-
-  box-sizing: border-box;
+  @include reset-list();
 }
 
 .programs-work__item {
   position: relative;
 
-  padding-left: 80px;
   margin-bottom: 40px;
+  padding-left: 80px;
 
   font-family: $font-arial;
   font-size: 14px;
@@ -32,27 +30,55 @@
     background-color: $color-btn;
   }
 
-  &--1::before {
+  &--leaf::before {
     background-image: url("../img/advantage-leaf@1x.png");
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &--2::before {
+  &--powder::before {
     background-image: url("../img/advantage-powder@1x.png");
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &--3::before {
+  &--dining::before {
     background-image: url("../img/advantage-dining@1x.png");
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &--4::before {
+  &--clock::before {
     background-image: url("../img/advantage-clock@1x.png");
     background-repeat: no-repeat;
     background-position: center;
+  }
+}
+
+@media #{$tablet-widths} {
+  .programs-work__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .programs-work__item {
+    flex-basis: 46%;
+    margin-bottom: 90px;
+    padding-left: 0;
+    padding-top: 110px;
+
+    font-size: 16px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+@media #{$desktop-widths} {
+  .programs-work__item {
+    flex-basis: 20%;
   }
 }

@@ -25,10 +25,7 @@
 .products-wrap__more-btn {
   @include reset-btn();
 
-  display: inline-block;
-  vertical-align: top;
-  width: 100%;
-  padding: 10px 0;
+  padding: 10px 80px;
 
   font-size: 14px;
   text-decoration: none;
@@ -36,4 +33,22 @@
   text-align: center;
 
   background-color: #f2f2f2;
+}
+
+@media #{$tablet-widths} {
+  .products-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .products-wrap__more {
+    width: 324px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .products-wrap__more {
+    width: 245px;
+  }
 }

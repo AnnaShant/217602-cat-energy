@@ -1,11 +1,9 @@
 .goods-list {
-  @include list-clear();
+  @include reset-list();
 
   margin: 40px 0;
 
   border-top: 1px solid #e6e6e6;
-
-  box-sizing: border-box;
 }
 
 .goods-list__item {
@@ -30,4 +28,19 @@
   font-size: 14px;
   text-transform: none;
   color: #444444;
+}
+
+@media #{$desktop-widths} {
+  .goods-list {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .goods-list__item {
+    display: flex;
+    align-items: flex-start;
+
+    width: 895px;
+  }
 }

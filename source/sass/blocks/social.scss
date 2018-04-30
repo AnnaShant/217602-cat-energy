@@ -19,3 +19,9 @@
 .social__item:last-child {
   margin-right: 0;
 }
+
+@media #{$tablet-widths} {
+  .social__list {
+    border: none;
+  }
+}

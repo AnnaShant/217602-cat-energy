@@ -9,21 +9,40 @@
 
   padding: 10px 0;
   padding-left: 10px;
-
-  box-sizing: border-box;
 }
 
 .form__wrap label {
   margin-top: 10px;
-  margin-right: 15px;
+  margin-right: 0;
 }
 
 .form__title {
+  position: relative;
+
   margin-bottom: 30px;
 
   font-size: 24px;
   font-weight: 400;
   text-transform: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+
+    height: 5px;
+    width: 5000px;
+    background-color: $color-btn;
+  }
+
+  &::before {
+    right: 100%;
+  }
+
+  &::after {
+    left: 100%;
+  }
 }
 
 .form__btn {
@@ -51,13 +70,11 @@
 }
 
 .form-option__list {
-  @include list-clear();
+  @include reset-list();
 
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
-
-  box-sizing: border-box;
 }
 
 .form-option__item {
@@ -80,8 +97,6 @@
 
 .form-comment textarea {
   width: 100%;
-
-  box-sizing: border-box;
 }
 
 .form-cat-data {
@@ -97,11 +112,51 @@
 }
 
 .form-additionally__list {
-  @include list-clear();
-
-  box-sizing: border-box;
+  @include reset-list();
 }
 
 .form-additionally__item {
   margin-bottom: 20px;
+}
+
+@media #{$tablet-widths} {
+  .form-additionally__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form-additionally__item {
+    width: 324px;
+  }
+
+  .form__btn-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form .form__btn {
+    width: auto;
+    padding: 10px 65px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .form__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-cat-data,
+  .form__option {
+    width: 570px;
+  }
+
+  .form-additionally__item {
+    width: 245px;
+  }
+
+  .form__btn-wrap {
+    justify-content: flex-start;
+  }
 }

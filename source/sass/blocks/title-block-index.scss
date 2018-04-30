@@ -3,3 +3,9 @@
   font-weight: 400;
   text-transform: none;
 }
+
+@media #{$tablet-widths} {
+  .title-block-index {
+    font-size: 60px;
+  }
+}
