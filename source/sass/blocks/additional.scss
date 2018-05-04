@@ -1,0 +1,170 @@
+.additional__title {
+  position: relative;
+
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 100%;
+
+    height: 5px;
+    width: 60px;
+
+    background-color: $color-btn;
+
+    box-shadow: 60px 0 0 $color-btn, 120px 0 0 $color-btn, 180px 0 0 $color-btn;
+  }
+}
+
+.additional__all {
+  position: relative;
+
+  margin: 0 auto;
+  margin-bottom: 36px;
+  padding-top: 95px;
+  padding-bottom: 20px;
+
+  background-color: $color-btn;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.additional__all-image {
+  position: absolute;
+
+  top: 65px;
+  left: 115px;
+}
+
+.additional__all-text {
+  width: 165px;
+
+  margin-left: 60px;
+  margin-top: 90px;
+
+  font-family: $font-arial;
+  text-transform: none;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media #{$tablet-widths} {
+  .additional__title {
+    margin-top: 35px;
+    margin-left: 37px;
+
+    font-size: 36px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+
+      height: 5px;
+      width: 400px;
+      background-color: $color-btn;
+    }
+
+    &::before {
+      right: 100%;
+
+      box-shadow: -400px 0 0 $color-btn, -800px 0 0 $color-btn;
+    }
+
+    &::after {
+      left: 50%;
+
+      box-shadow: 400px 0 0 $color-btn, 800px 0 0 $color-btn;
+    }
+  }
+
+  .additional__all {
+    display: flex;
+    justify-content: space-around;
+
+    width: 708px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 76px;
+    padding-bottom: 48px;
+  }
+
+  .additional__all-image {
+    position: absolute;
+
+    top: 65px;
+    left: 90px;
+  }
+
+  .additional__all-text {
+    margin-left: 305px;
+    margin-top: 70px;
+
+    text-align: left;
+  }
+}
+
+@media #{$desktop-widths} {
+  .additional__title {
+    margin-top: 38px;
+    margin-left: 0;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+
+      height: 5px;
+      width: 1000px;
+      background-color: $color-btn;
+    }
+
+    &::before {
+      right: 100%;
+
+      box-shadow: -1000px 0 0 $color-btn, -2000px 0 0 $color-btn;
+    }
+
+    &::after {
+      left: 30%;
+
+      box-shadow: 1000px 0 0 $color-btn, 2000px 0 0 $color-btn;
+    }
+  }
+
+  .additional__wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .additional__all {
+    flex-basis: 20%;
+
+    margin-top: 45px;
+    margin-bottom: 87px;
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+  .additional__all-image {
+    position: absolute;
+
+    top: 63px;
+    left: 95px;
+  }
+
+  .additional__all-text {
+    margin-top: 185px;
+    margin-left: 0;
+
+    text-align: center;
+  }
+}

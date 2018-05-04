@@ -1,0 +1,36 @@
+.page-main__title {
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.page-main__text {
+  width: 227px;
+  margin-top: -10px;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media #{$tablet-widths} {
+  .page-main__title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .page-main__text {
+    width: 384px;
+    margin-top: 28px;
+    padding-left: 40px;
+
+    font-size: 20px;
+    line-height: 1.7;
+  }
+}
+
+@media #{$desktop-widths} {
+  .page-main__text {
+    padding-left: 0;
+  }
+}

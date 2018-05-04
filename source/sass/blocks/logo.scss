@@ -1,0 +1,19 @@
+.logo {
+  padding-bottom: 23px;
+
+  border-bottom: 1px solid #e6e6e6;
+}
+
+@media #{$tablet-widths} {
+  .logo {
+    margin-right: 50px;
+
+    border: none;
+  }
+}
+
+@media #{$desktop-widths} {
+  .logo {
+    width: 245px;
+  }
+}

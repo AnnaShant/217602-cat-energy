@@ -1,0 +1,193 @@
+.programs-cats__box {
+  position: relative;
+
+  margin-bottom: 22px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+  background-color: #f2f2f2;
+}
+
+.programs-cats__wrap {
+  padding: 0 20px;
+}
+
+.programs-cats__img {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 25px;
+    left: 23px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: $color-btn;
+
+    border-radius: 50%;
+  }
+}
+
+.programs-cats__svg {
+  position: absolute;
+  z-index: 2;
+
+  &--slim {
+    top: 22px;
+    left: 30px;
+  }
+
+  &--pro {
+    top: 35px;
+    left: 15px;
+  }
+}
+
+.programs-cats__title {
+  margin-left: 72px;
+  margin-bottom: 30px;
+
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.programs-cats__text {
+  padding-bottom: 22px;
+
+  font-family: $font-arial;
+  font-size: 14px;
+  line-height: 1.3;
+  text-transform: none;
+  color: #444444;
+
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.programs-cats__link {
+  position: relative;
+
+  line-height: 1;
+  color: #000000;
+  text-decoration: none;
+}
+
+@media #{$tablet-widths} {
+  .programs-cats__box {
+    margin-bottom: 30px;
+  }
+
+  .programs-cats__wrap {
+    padding-left: 54px;
+    padding-right: 62px;
+    padding-bottom: 40px;
+  }
+
+  .programs-cats__title {
+    margin: 0;
+    margin-top: 56px;
+    margin-bottom: 18px;
+
+    font-size: 36px;
+  }
+
+  .programs-cats__text {
+    width: 380px;
+    margin-bottom: 32px;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    border: none;
+
+    &--pro {
+      width: 340px;
+    }
+  }
+
+  .programs-cats__img {
+    &::after {
+      top: 92px;
+      left: 446px;
+
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .programs-cats__svg {
+    position: absolute;
+    z-index: 2;
+
+    &--slim {
+      top: 78px;
+      left: 476px;
+
+      width: 140px;
+      height: 194px;
+    }
+
+    &--pro {
+      top: 135px;
+      left: 413px;
+
+      width: 269px;
+      height: 112px;
+    }
+  }
+
+  .programs-cats__link {
+    font-size: 20px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .programs-cats {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .programs-cats__box {
+    width: 570px;
+    margin-bottom: 22px;
+  }
+
+  .programs-cats__title {
+    margin-left: 160px;
+    margin-bottom: 70px;
+  }
+
+  .programs-cats__text {
+    width: 464px;
+    margin-bottom: 8px;
+  }
+
+  .programs-cats__img {
+    &::after {
+      top: 50px;
+      left: 50px;
+
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .programs-cats__svg {
+    &--slim {
+      top: 43px;
+      left: 64px;
+
+      width: 72px;
+      height: 97px;
+    }
+
+    &--pro {
+      top: 69px;
+      left: 34px;
+
+      width: 134px;
+      height: 56px;
+    }
+  }
+}
