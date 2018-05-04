@@ -1,9 +1,9 @@
 .products-wrap__more {
   position: relative;
 
-  margin-bottom: 40px;
-  padding-top: 80px;
-  padding-bottom: 25px;
+  margin-bottom: 24px;
+  padding-top: 66px;
+  padding-bottom: 32px;
 
   text-align: center;
 
@@ -12,12 +12,17 @@
 }
 
 .products-wrap__more-title {
+  font-size: 16px;
+  line-height: 0.7;
   font-weight: 400;
 }
 
 .products-wrap__more-text {
+  margin-bottom: 32px;
+
   font-family: $font-arial;
   font-size: 12px;
+  line-height: 1;
   text-transform: none;
   color: #444444;
 }
@@ -25,7 +30,7 @@
 .products-wrap__more-btn {
   @include reset-btn();
 
-  padding: 10px 80px;
+  padding: 10px 100px;
 
   font-size: 14px;
   text-decoration: none;
@@ -44,11 +49,43 @@
 
   .products-wrap__more {
     width: 324px;
+
+    padding-top: 280px;
+    padding-bottom: 32px;
+  }
+
+  .products-wrap__more-title {
+    width: 166px;
+    margin: 0 auto;
+    margin-bottom: 23px;
+
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .products-wrap__more-text {
+    width: 170px;
+    margin: 0 auto;
+    margin-bottom: 94px;
+
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .products-wrap__more-btn {
+    padding: 10px 85px;
+
+    font-size: 16px;
+    line-height: 1.25;
   }
 }
 
 @media #{$desktop-widths} {
   .products-wrap__more {
     width: 245px;
+  }
+
+  .products-wrap__more-btn {
+    padding: 10px 45px;
   }
 }
