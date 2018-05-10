@@ -1,5 +1,6 @@
 .page-footer {
-  padding-top: 23px;
+  padding-top: 22px;
+  padding-bottom: 25px;
 
   background-color: #f2f2f2;
 }
@@ -9,5 +10,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    padding-top: 23px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .page-footer {
+    padding-top: 17px;
   }
 }

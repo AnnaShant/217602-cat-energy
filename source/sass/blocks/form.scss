@@ -1,5 +1,5 @@
 .form {
-  margin-top: 38px;
+  margin-top: 40px;
   margin-bottom: 30px;
 
   font-size: 16px;
@@ -8,19 +8,41 @@
 
 .form__wrap {
   display: flex;
+  flex-wrap: wrap;
 
-  margin-bottom: 12px;
+  position: relative;
+
+  margin-bottom: 15px;
 }
 
-.form__wrap input {
-  width: 100%;
+.form__wrap input,
+.form__wrap input[name="contact-email"],
+.form__wrap input[name="contact-tel"],
+textarea {
+  flex-grow: 2.4;
 
-  padding: 10px 0;
+  padding: 11px 0;
   padding-left: 10px;
+
+  &:hover {
+    outline: 1px solid rgb(205, 205, 205);
+  }
+
+  &:focus {
+    outline: 2px solid rgb(68, 68, 68);
+  }
+
+  &:invalid {
+    outline: 2px solid rgb(255, 130, 130);
+  }
 }
 
 .form__wrap label {
+  display: block;
+  flex-grow: 0.6;
+
   margin-top: 10px;
+  padding: 0;
 }
 
 .form__title {
@@ -36,10 +58,10 @@
   &::after {
     content: "";
     position: absolute;
-    top: 10px;
-    left: 100%;
+    top: 14px;
+    left: 118%;
 
-    height: 5px;
+    height: 3px;
     width: 60px;
     background-color: $color-btn;
 
@@ -56,48 +78,115 @@
 }
 
 .form-cat-data {
+  margin: 0;
   padding: 0;
 
   border: none;
 }
 
 .form-option {
-  margin-top: 23px;
+  margin: 0;
+  margin-top: 8px;
   padding: 0;
+  padding-top: 20px;
 
   border: none;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
 }
 
+.form-option input {
+  display: none;
+}
+
+.form-option label {
+  position: relative;
+  display: block;
+
+  padding-top: 7px;
+  padding-left: 46px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 30px;
+    height: 30px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgb(205, 205, 205);
+    border-radius: 50%;
+  }
+
+  &:hover::before {
+    border: 1px solid rgb(186, 186, 186);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.form-option input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 9px;
+
+  width: 12px;
+  height: 12px;
+
+  background-color: $color-btn;
+
+  border-radius: 50%;
+}
+
 .form-option__list {
   @include reset-list();
 
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   padding-bottom: 7px;
 }
 
 .form-option__item {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 
 .form-option__item:last-child {
   margin-bottom: 0;
 }
 
-.form-option__item input {
-  margin-right: 30px;
-}
-
 .form-contact {
+  margin: 0;
+  margin-top: 28px;
   margin-bottom: 13px;
   padding: 0;
 
   border: none;
 }
 
+.form-contact__title {
+  &::after {
+    left: 72%;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  &--tel {
+    top: 13px;
+  }
+}
+
 .form-comment {
-  margin-bottom: 42px;
+  margin: 0;
+  margin-bottom: 25px;
   padding: 0;
 
   border: none;
@@ -105,13 +194,62 @@
 
 .form-comment textarea {
   width: 100%;
+  height: 151px;
 }
 
 .form-additionally {
+  margin: 0;
   margin-bottom: 21px;
   padding: 0;
 
   border: none;
+}
+
+.form-additionally input {
+  display: none;
+}
+
+.form-additionally label {
+  padding-top: 4px;
+  padding-left: 46px;
+}
+
+.form-additionally input + label {
+  position: relative;
+  display: block;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgb(205, 205, 205);
+  }
+
+  &:hover::before {
+    border: 1px solid rgb(186, 186, 186);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.form-additionally input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  width: 22px;
+  height: 20px;
+
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
 }
 
 .form-additionally__list {
@@ -135,11 +273,61 @@
 
 @media #{$tablet-widths} {
   .form {
-    margin-top: 70px;
+    margin-top: 64px;
     margin-bottom: 60px;
+    margin-left: 40px;
+    margin-right: 40px;
 
     font-size: 20px;
     line-height: 1;
+  }
+
+  .form__wrap {
+    margin-bottom: 21px;
+  }
+
+  .form__wrap input {
+    flex-grow: 2.9;
+
+    padding: 12px 0;
+    padding-left: 10px;
+  }
+
+  .form__wrap label {
+    flex-grow: 0.1;
+
+    margin-top: 15px;
+  }
+
+  .form-option {
+    margin-top: 52px;
+    margin-bottom: 75px;
+    padding-top: 25px;
+    padding-bottom: 9px;
+    padding-left: 30px;
+
+    border: 1px solid #e6e6e6;
+  }
+
+  .form-option__item {
+    margin-bottom: 26px;
+  }
+
+  .form-option label {
+    padding-left: 56px;
+
+    &::before {
+      top: -2px;
+      left: -2px;
+
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .form-option input:checked + label::after {
+    width: 18px;
+    height: 18px;
   }
 
   .form__title {
@@ -149,39 +337,28 @@
     &::after {
       content: "";
       position: absolute;
-      top: 10px;
+      top: 21px;
 
-      height: 5px;
+      height: 3px;
       width: 400px;
       background-color: $color-btn;
     }
 
     &::before {
-      right: 100%;
+      right: 108%;
 
       box-shadow: -400px 0 0 $color-btn, -800px 0 0 $color-btn;
     }
 
     &::after {
-      left: 100%;
+      left: 108%;
 
       box-shadow: 400px 0 0 $color-btn, 800px 0 0 $color-btn;
     }
   }
 
-  .form-option {
-    margin-top: 112px;
-    margin-bottom: 75px;
-    padding-left: 80px;
-  }
-
-  .form-option__item {
-    margin-bottom: 33px;
-  }
-
   .form-contact {
-    margin-left: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 47px;
   }
 
   .form-contact__title {
@@ -193,26 +370,70 @@
   }
 
   .form-comment {
-    margin-bottom: 112px;
-    margin-left: 40px;
+    margin-bottom: 65px;
     padding: 0;
   }
 
-  .form-additionally {
-    margin-left: 40px;
+  .form-comment__title {
+    margin-bottom: 75px;
+
+    &::before {
+      right: 122%;
+    }
+
+    &::after {
+      left: 122%;
+    }
+  }
+
+  .form-comment textarea {
+    height: 174px;
+  }
+
+  .form-additionally__title {
+    &::before {
+      right: 120%;
+    }
+
+    &::after {
+      left: 120%;
+    }
+  }
+
+  .form-additionally label {
+    padding-left: 60px;
+  }
+
+  .form-additionally input + label {
+    &::before {
+      top: -5px;
+
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .form-additionally input:checked + label::after {
+    top: 8px;
+    left: 10px;
+
+    width: 22px;
+    height: 20px;
   }
 
   .form-additionally__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 
-    margin-top: 32px;
+    width: 708px;
+
+    margin-top: 25px;
   }
 
   .form-additionally__item {
-    width: 324px;
-    margin-bottom: 55px;
+    width: 344px;
+
+    margin-bottom: 50px;
   }
 
   .form-additionally__item input {
@@ -223,8 +444,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    margin-top: -11px;
-    margin-left: 40px;
+    margin-top: -8px;
   }
 
   .form .form__btn {
@@ -241,6 +461,8 @@
 
 @media #{$desktop-widths} {
   .form {
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 74px;
   }
 
@@ -249,23 +471,44 @@
     &::after {
       content: "";
       position: absolute;
-      top: 10px;
+      top: 21px;
 
-      height: 5px;
       width: 1000px;
       background-color: $color-btn;
     }
 
     &::before {
-      right: 100%;
+      right: 108%;
 
       box-shadow: -1000px 0 0 $color-btn, -2000px 0 0 $color-btn;
     }
 
     &::after {
-      left: 100%;
+      left: 108%;
 
       box-shadow: 1000px 0 0 $color-btn, 2000px 0 0 $color-btn;
+    }
+  }
+
+  .form-comment__title {
+    margin-bottom: 75px;
+
+    &::before {
+      right: 122%;
+    }
+
+    &::after {
+      left: 122%;
+    }
+  }
+
+  .form-additionally__title {
+    &::before {
+      right: 118%;
+    }
+
+    &::after {
+      left: 120%;
     }
   }
 
@@ -277,21 +520,29 @@
   .form-cat-data,
   .form__option {
     width: 570px;
+
+    margin-bottom: 20px;
   }
 
   .form-option {
     margin-top: 0;
-    padding-left: 43px;
+    padding-left: 29px;
   }
 
   .form-option__item {
-    margin-top: 30px;
+    margin-top: 0;
   }
 
-  .form-contact,
-  .form-comment,
-  .form-additionally {
-    margin-left: 0;
+  .form-contact .form__wrap {
+    width: 570px;
+  }
+
+  .form-additionally__list {
+    justify-content: space-between;
+
+    width: 1220px;
+
+    margin-top: 30px;
   }
 
   .form-additionally__item {
@@ -299,6 +550,7 @@
   }
 
   .form__btn-wrap {
+    margin-top: 8px;
     margin-left: 0;
   }
 

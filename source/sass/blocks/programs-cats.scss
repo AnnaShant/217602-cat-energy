@@ -1,9 +1,9 @@
 .programs-cats__box {
   position: relative;
 
-  margin-bottom: 22px;
+  margin-bottom: 21px;
   padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
 
   background-color: #f2f2f2;
 }
@@ -17,8 +17,8 @@
     content: "";
 
     position: absolute;
-    top: 25px;
-    left: 23px;
+    top: 24px;
+    left: 22px;
 
     width: 50px;
     height: 50px;
@@ -40,7 +40,7 @@
 
   &--pro {
     top: 35px;
-    left: 15px;
+    left: 13px;
   }
 }
 
@@ -54,6 +54,7 @@
 }
 
 .programs-cats__text {
+  margin-bottom: 16px;
   padding-bottom: 22px;
 
   font-family: $font-arial;
@@ -71,6 +72,18 @@
   line-height: 1;
   color: #000000;
   text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.programs-cats__link-arrow {
+  margin-left: 8px;
+}
+
+.programs-cats__link:hover .programs-cats__link-arrow {
+  width: 34px;
 }
 
 @media #{$tablet-widths} {
@@ -139,6 +152,10 @@
 
   .programs-cats__link {
     font-size: 20px;
+  }
+
+  .programs-cats__link-arrow {
+    margin-left: 17px;
   }
 }
 

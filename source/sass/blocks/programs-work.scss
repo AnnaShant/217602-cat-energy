@@ -1,9 +1,9 @@
 .programs-work {
-  margin-bottom: 47px;
+  margin-bottom: 45px;
 }
 
 .programs-work__title {
-  margin-bottom: 41px;
+  margin-bottom: 40px;
 }
 
 .programs-work__list {
@@ -73,6 +73,7 @@
 
   .programs-work__item {
     flex-basis: 45%;
+
     margin-bottom: 135px;
     margin-right: 5px;
     padding-left: 0;
@@ -83,6 +84,66 @@
     &::before {
       width: 80px;
       height: 80px;
+    }
+
+    &--leaf::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 120px;
+      z-index: -1;
+
+      width: 71px;
+      height: 228px;
+
+      background-image: url("../img/one@1x.png");
+      background-size: cover;
+    }
+
+    &--powder::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 83px;
+      z-index: -1;
+
+      width: 114px;
+      height: 230px;
+
+      background-image: url("../img/two@1x.png");
+      background-size: cover;
+    }
+
+    &--dining::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 83px;
+      z-index: -1;
+
+      width: 113px;
+      height: 233px;
+
+      background-image: url("../img/three@1x.png");
+      background-size: cover;
+    }
+
+    &--clock::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 73px;
+      z-index: -1;
+
+      width: 121px;
+      height: 228px;
+
+      background-image: url("../img/four@1x.png");
+      background-size: cover;
     }
   }
 
@@ -103,6 +164,22 @@
     flex-basis: 20%;
 
     margin: 0;
+
+    &--leaf::after {
+      right: 50px;
+    }
+
+    &--powder::after {
+      right: 10px;
+    }
+
+    &--dining::after {
+      right: 10px;
+    }
+
+    &--clock::after {
+      right: 0;
+    }
   }
 
   .programs-work__title {

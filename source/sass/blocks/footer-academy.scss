@@ -5,14 +5,36 @@
 }
 
 .footer-academy__link {
-  margin: 25px 0;
+  margin: 27px 0;
 
   font-family: $font-arial;
   text-decoration: none;
   text-transform: none;
   color: #444444;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--logo {
+    margin: 16px 0;
+  }
 }
 
 .footer-academy__svg path {
-  fill: #444444;
+  fill: #666666;
+
+  &:hover {
+    fill: $color-btn;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media #{$tablet-widths} {
+  .footer-academy {
+    width: 162px;
+  }
 }

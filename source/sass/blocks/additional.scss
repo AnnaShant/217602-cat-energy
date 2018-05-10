@@ -8,10 +8,10 @@
   &::after {
     content: "";
     position: absolute;
-    top: 10px;
-    left: 100%;
+    top: 19px;
+    left: 89%;
 
-    height: 5px;
+    height: 3px;
     width: 60px;
 
     background-color: $color-btn;
@@ -64,21 +64,21 @@
     &::after {
       content: "";
       position: absolute;
-      top: 10px;
+      top: 28px;
 
-      height: 5px;
+      height: 3px;
       width: 400px;
       background-color: $color-btn;
     }
 
     &::before {
-      right: 100%;
+      right: 106%;
 
       box-shadow: -400px 0 0 $color-btn, -800px 0 0 $color-btn;
     }
 
     &::after {
-      left: 50%;
+      left: 56%;
 
       box-shadow: 400px 0 0 $color-btn, 800px 0 0 $color-btn;
     }
@@ -112,28 +112,27 @@
 
 @media #{$desktop-widths} {
   .additional__title {
-    margin-top: 38px;
+    margin-top: 40px;
     margin-left: 0;
 
     &::before,
     &::after {
       content: "";
       position: absolute;
-      top: 10px;
+      top: 30px;
 
-      height: 5px;
       width: 1000px;
       background-color: $color-btn;
     }
 
     &::before {
-      right: 100%;
+      right: 103%;
 
       box-shadow: -1000px 0 0 $color-btn, -2000px 0 0 $color-btn;
     }
 
     &::after {
-      left: 30%;
+      left: 30.5%;
 
       box-shadow: 1000px 0 0 $color-btn, 2000px 0 0 $color-btn;
     }

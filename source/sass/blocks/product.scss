@@ -68,8 +68,14 @@
     margin-bottom: 24px;
     padding-bottom: 40px;
 
-    background: linear-gradient(to top, #f2f2f2 77%, #ffffff 30%);
+    background: linear-gradient(to top, #f2f2f2 78.4%, #ffffff 30%);
     border: none;
+  }
+
+  .product__wrap {
+    position: relative;
+
+    padding-top: 255px;
   }
 
   .product__link {
@@ -77,16 +83,23 @@
   }
 
   .product__img {
-    width: 154px;
-    height: 190px;
+    position: absolute;
+    top: 34px;
+    left: 0;
 
-    margin-bottom: 62px;
+    margin-bottom: 10px;
+
+    background: none;
+
+    &--small {
+      top: 70px;
+    }
   }
 
   .product__block {
     flex-basis: 100%;
 
-    margin-bottom: 17px;
+    margin-bottom: 15px;
     padding: 0 38px;
   }
 

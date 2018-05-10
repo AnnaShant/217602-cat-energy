@@ -2,5 +2,21 @@
   display: flex;
   justify-content: center;
 
-  margin-bottom: 17px;
+  margin-bottom: 15px;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@media #{$tablet-widths} {
+  .footer-logo {
+    margin-right: 15px;
+  }
 }

@@ -5,19 +5,20 @@
 }
 
 .map__wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
   padding: 11px 0;
-  padding-left: 80px;
-  padding-right: 80px;
 
   background-color: #f2f2f2;
 
   &--index {
     background-color: #ffffff;
   }
+}
+
+.map__box-text {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 5px;
 }
 
 .map__interactive {
@@ -36,7 +37,7 @@
 }
 
 .map__text {
-  flex-basis: 50%;
+  flex-basis: 45%;
 
   font-size: 16px;
   line-height: 1.25;
@@ -44,6 +45,8 @@
 
 .map__address {
   flex-basis: 50%;
+
+  margin-top: 18px;
 
   font-family: $font-arial;
   font-size: 14px;
@@ -55,10 +58,10 @@
   .map__wrap {
     display: flex;
     justify-content: space-between;
+  }
 
-    padding: 48px 80px;
-    padding-left: 130px;
-    padding-right: 130px;
+  .map__box-text {
+    padding: 32px 70px;
   }
 
   .map__interactive {
@@ -78,7 +81,11 @@
   .map__address {
     flex-basis: 30%;
 
+    margin-top: 18px;
+
     font-size: 16px;
+    line-height: 1.7;
+
     text-align: right;
   }
 }
@@ -91,7 +98,12 @@
     left: 18%;
 
     width: 570px;
-    padding: 47px 80px;
+
+    background-color: #ffffff;
+  }
+
+  .map__box-text {
+    padding: 35px 70px;
   }
 
   .map__interactive {

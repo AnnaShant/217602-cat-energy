@@ -7,6 +7,11 @@
 
   text-align: center;
 
+  background-image: url("../img/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center 15%;
+  background-size: 30px;
+
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -50,8 +55,10 @@
   .products-wrap__more {
     width: 324px;
 
-    padding-top: 280px;
-    padding-bottom: 32px;
+    margin-top: 116px;
+    padding-top: 164px;
+
+    background-size: 60px;
   }
 
   .products-wrap__more-title {

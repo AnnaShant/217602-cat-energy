@@ -1,5 +1,5 @@
 .selection-program-box {
-  margin-bottom: 12px;
+  margin-bottom: 11px;
   padding: 11px 0;
 
   color: #ffffff;
@@ -12,7 +12,7 @@
 
 .selection-program-box__title {
   width: 280px;
-  margin-top: 14px;
+  margin-top: 16px;
 
   font-size: 36px;
   font-weight: 400;
@@ -29,7 +29,10 @@
 
 @media #{$tablet-widths} {
   .selection-program-box {
-    padding-bottom: 517px;
+    position: relative;
+
+    margin-bottom: 0;
+    padding-bottom: 0;
 
     text-align: left;
 
@@ -52,12 +55,11 @@
   }
 
   .selection-program-box .selection-program-box__btn {
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    top: 255px;
+    left: 125px;
 
     width: auto;
-    margin-top: 20px;
-    margin-left: 89px;
     padding: 16px 28px;
 
     font-size: 20px;
@@ -65,13 +67,7 @@
   }
 
   .selection-program-box__img {
-    position: absolute;
-    top: 330px;
-    left: 180px;
-    z-index: 1;
-
-    width: 610px;
-    height: 620px;
+    margin-top: -7px;
   }
 }
 
@@ -79,7 +75,8 @@
   .selection-program-box {
     margin-top: -158px;
     margin-bottom: 77px;
-    padding-bottom: 190px;
+    padding-top: 31px;
+    padding-bottom: 263px;
 
     background: linear-gradient(to right, #ffffff 50%, #68b738 50%);
   }
@@ -99,14 +96,13 @@
   }
 
   .selection-program-box__img {
-    width: 418px;
-    height: 450px;
-
-    top: 135px;
-    left: 860px;
+    position: absolute;
+    top: 170px;
+    left: 790px;
   }
 
   .selection-program-box .selection-program-box__btn {
-    margin-left: 80px;
+    top: 475px;
+    left: 420px;
   }
 }
