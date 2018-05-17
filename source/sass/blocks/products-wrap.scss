@@ -1,9 +1,8 @@
-.products-wrap__more {
+.product-wrap__box {
   position: relative;
 
-  margin-bottom: 24px;
   padding-top: 66px;
-  padding-bottom: 32px;
+  padding-bottom: 36px;
 
   text-align: center;
 
@@ -18,7 +17,7 @@
 
 .products-wrap__more-title {
   font-size: 16px;
-  line-height: 0.7;
+  line-height: 1;
   font-weight: 400;
 }
 
@@ -35,9 +34,9 @@
 .products-wrap__more-btn {
   @include reset-btn();
 
-  padding: 10px 100px;
+  padding: 8px 80px;
 
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   color: #444444;
   text-align: center;
@@ -50,15 +49,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    padding-bottom: 10px;
   }
 
-  .products-wrap__more {
+  .product-wrap__box {
     width: 324px;
 
     margin-top: 116px;
     padding-top: 164px;
+    padding-bottom: 48px;
 
     background-size: 60px;
+
+    border: 1px solid #e6e6e6;
   }
 
   .products-wrap__more-title {
@@ -73,22 +77,20 @@
   .products-wrap__more-text {
     width: 170px;
     margin: 0 auto;
-    margin-bottom: 94px;
+    margin-bottom: 96px;
 
     font-size: 16px;
     line-height: 1.2;
   }
 
   .products-wrap__more-btn {
-    padding: 10px 85px;
-
-    font-size: 16px;
-    line-height: 1.25;
+    padding: 9px 80px;
   }
 }
 
 @media #{$desktop-widths} {
-  .products-wrap__more {
+  .products-wrap__more,
+  .product-wrap__box {
     width: 245px;
   }
 

@@ -1,5 +1,7 @@
-var navMain = document.querySelector('.main-nav');
-var navToggle = document.querySelector('.main-nav__toggle');
+"use strict";
+
+  var navMain = document.querySelector('.main-nav');
+  var navToggle = document.querySelector('.main-nav__toggle');
 
   navMain.classList.remove('main-nav--nojs');
 
@@ -10,5 +12,5 @@ var navToggle = document.querySelector('.main-nav__toggle');
     } else {
       navMain.classList.add('main-nav--closed');
       navMain.classList.remove('main-nav--opened');
-  }
-});
+    }
+  });

@@ -1,6 +1,6 @@
 .form {
-  margin-top: 40px;
-  margin-bottom: 30px;
+  padding-top: 40px;
+  padding-bottom: 17px;
 
   font-size: 16px;
   line-height: 1.125;
@@ -9,37 +9,62 @@
 .form__wrap {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
   position: relative;
 
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 
 .form__wrap input,
 .form__wrap input[name="contact-email"],
 .form__wrap input[name="contact-tel"],
-textarea {
-  flex-grow: 2.4;
+.form-comment textarea {
+  padding: 12px 0;
+  padding-left: 15px;
 
-  padding: 11px 0;
-  padding-left: 10px;
+  border: none;
+  outline: 1px solid #e6e6e6;
 
   &:hover {
+    border: none;
     outline: 1px solid rgb(205, 205, 205);
   }
 
-  &:focus {
+  &:focus,
+  &:active {
+    border: none;
     outline: 2px solid rgb(68, 68, 68);
   }
 
   &:invalid {
+    border: none;
     outline: 2px solid rgb(255, 130, 130);
   }
 }
 
+.form__wrap input[name="cat-data-name"] {
+  width: 228px;
+}
+
+.form__wrap input[name="cat-data-weight"] {
+  width: 203px;
+}
+
+.form__wrap input[name="cat-data-age"] {
+  width: 170px;
+}
+
+.form__wrap input[name="contact-email"] {
+  width: 217px;
+}
+
+.form__wrap input[name="contact-tel"] {
+  width: 202px;
+}
+
 .form__wrap label {
   display: block;
-  flex-grow: 0.6;
 
   margin-top: 10px;
   padding: 0;
@@ -57,15 +82,18 @@ textarea {
 
   &::after {
     content: "";
-    position: absolute;
-    top: 14px;
-    left: 118%;
+    display: inline-block;
+    vertical-align: middle;
 
+    width: 100px;
     height: 3px;
-    width: 60px;
+
+    margin-right: -100%;
+    margin-left: 25px;
+
     background-color: $color-btn;
 
-    box-shadow: 60px 0 0 $color-btn, 120px 0 0 $color-btn, 180px 0 0 $color-btn;
+    box-shadow: 100px 0 0  $color-btn, 200px 0 0  $color-btn, 300px 0 0  $color-btn;
   }
 }
 
@@ -106,6 +134,8 @@ textarea {
   padding-top: 7px;
   padding-left: 46px;
 
+  cursor: pointer;
+
   &::before {
     content: "";
     position: absolute;
@@ -123,10 +153,6 @@ textarea {
 
   &:hover::before {
     border: 1px solid rgb(186, 186, 186);
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }
 
@@ -147,12 +173,18 @@ textarea {
 .form-option__list {
   @include reset-list();
 
-  margin-bottom: 20px;
-  padding-bottom: 7px;
+  padding-bottom: 10px;
 }
 
 .form-option__item {
-  margin-bottom: 17px;
+  padding-bottom: 17px;
+
+  outline: none;
+
+  &:active,
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .form-option__item:last-child {
@@ -168,19 +200,35 @@ textarea {
   border: none;
 }
 
-.form-contact__title {
-  &::after {
-    left: 72%;
+.form__wrap {
+  &--mail input {
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-size: 17px 14px;
+    background-position: 183px;
+
+   &:focus {
+     background-image: url("../img/icon-mail-green.svg");
+   }
+
+   &:invalid {
+     background-image: url("../img/icon-mail-red.svg");
+   }
   }
-}
 
-.form__icon {
-  position: absolute;
-  top: 16px;
-  right: 16px;
+  &--tel input {
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 167px;
 
-  &--tel {
-    top: 13px;
+   &:focus {
+     background-image: url("../img/icon-phone-green.svg");
+   }
+
+   &:invalid {
+     background-image: url("../img/icon-phone-red.svg");
+   }
   }
 }
 
@@ -194,7 +242,10 @@ textarea {
 
 .form-comment textarea {
   width: 100%;
-  height: 151px;
+  min-height: 150px;
+  padding-top: 15px;
+
+  resize: none;
 }
 
 .form-additionally {
@@ -218,6 +269,8 @@ textarea {
   position: relative;
   display: block;
 
+  cursor: pointer;
+
   &::before {
     content: "";
     position: absolute;
@@ -232,10 +285,6 @@ textarea {
 
   &:hover::before {
     border: 1px solid rgb(186, 186, 186);
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }
 
@@ -258,45 +307,76 @@ textarea {
 }
 
 .form-additionally__item {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+  outline: none;
+
+  &:active,
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .form-additionally__item input {
   margin-right: 30px;
 }
 
-.form__btn {
-  margin-bottom: 9px;
-
-  text-transform: uppercase;
-}
-
 @media #{$tablet-widths} {
   .form {
-    margin-top: 64px;
-    margin-bottom: 60px;
-    margin-left: 40px;
-    margin-right: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 65px;
+    padding-bottom: 63px;
 
     font-size: 20px;
     line-height: 1;
   }
 
   .form__wrap {
-    margin-bottom: 21px;
+    margin-bottom: 23px;
   }
 
   .form__wrap input {
-    flex-grow: 2.9;
-
-    padding: 12px 0;
-    padding-left: 10px;
+    padding: 13px 0;
+    padding-left: 17px;
   }
 
   .form__wrap label {
-    flex-grow: 0.1;
-
     margin-top: 15px;
+  }
+
+  .form__wrap input[name="cat-data-name"] {
+    width: 560px;
+  }
+
+  .form__wrap input[name="cat-data-weight"] {
+    width: 530px;
+  }
+
+  .form__wrap input[name="cat-data-age"] {
+    width: 490px;
+  }
+
+  .form__wrap input[name="contact-email"] {
+    width: 550px;
+    padding: 14px 0;
+    padding-left: 22px;
+  }
+
+  .form__wrap input[name="contact-tel"] {
+    width: 530px;
+    padding: 14px 0;
+    padding-left: 22px;
+  }
+
+  .form__wrap {
+    &--mail input {
+      background-position: 515px;
+    }
+
+    &--tel input {
+      background-position: 495px;
+    }
   }
 
   .form-option {
@@ -310,7 +390,7 @@ textarea {
   }
 
   .form-option__item {
-    margin-bottom: 26px;
+    margin-bottom: 8px;
   }
 
   .form-option label {
@@ -333,27 +413,26 @@ textarea {
   .form__title {
     font-size: 36px;
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 21px;
-
-      height: 3px;
-      width: 400px;
-      background-color: $color-btn;
-    }
-
     &::before {
-      right: 108%;
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
 
-      box-shadow: -400px 0 0 $color-btn, -800px 0 0 $color-btn;
+      width: 100%;
+      height: 3px;
+
+      margin-left: -100%;
+      margin-right: 25px;
+
+      background-color: $color-btn;
+
+      box-shadow: 0 0 200px  $color-btn, 0 0 300px  $color-btn, 0 0 400px  $color-btn;
     }
 
     &::after {
-      left: 108%;
+      width: 200px;
 
-      box-shadow: 400px 0 0 $color-btn, 800px 0 0 $color-btn;
+      box-shadow: 200px 0 0  $color-btn, 300px 0 0  $color-btn, 400px 0 0  $color-btn;
     }
   }
 
@@ -376,28 +455,11 @@ textarea {
 
   .form-comment__title {
     margin-bottom: 75px;
-
-    &::before {
-      right: 122%;
-    }
-
-    &::after {
-      left: 122%;
-    }
   }
 
   .form-comment textarea {
-    height: 174px;
-  }
-
-  .form-additionally__title {
-    &::before {
-      right: 120%;
-    }
-
-    &::after {
-      left: 120%;
-    }
+    min-height: 172px;
+    padding-top: 15px;
   }
 
   .form-additionally label {
@@ -433,7 +495,7 @@ textarea {
   .form-additionally__item {
     width: 344px;
 
-    margin-bottom: 50px;
+    margin-bottom: 32px;
   }
 
   .form-additionally__item input {
@@ -447,12 +509,6 @@ textarea {
     margin-top: -8px;
   }
 
-  .form .form__btn {
-    width: auto;
-    margin-right: 63px;
-    padding: 17px 80px;
-  }
-
   .form__text {
     font-size: 16px;
     line-height: 1;
@@ -461,60 +517,54 @@ textarea {
 
 @media #{$desktop-widths} {
   .form {
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 74px;
-  }
-
-  .form__title {
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 21px;
-
-      width: 1000px;
-      background-color: $color-btn;
-    }
-
-    &::before {
-      right: 108%;
-
-      box-shadow: -1000px 0 0 $color-btn, -2000px 0 0 $color-btn;
-    }
-
-    &::after {
-      left: 108%;
-
-      box-shadow: 1000px 0 0 $color-btn, 2000px 0 0 $color-btn;
-    }
-  }
-
-  .form-comment__title {
-    margin-bottom: 75px;
-
-    &::before {
-      right: 122%;
-    }
-
-    &::after {
-      left: 122%;
-    }
-  }
-
-  .form-additionally__title {
-    &::before {
-      right: 118%;
-    }
-
-    &::after {
-      left: 120%;
-    }
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 72px;
   }
 
   .form__box {
     display: flex;
     justify-content: space-between;
+  }
+
+  .form__wrap {
+    &--mail input {
+      background-position: 450px;
+    }
+
+    &--tel input {
+      background-position: 430px;
+    }
+  }
+
+  .form__title {
+    &::after {
+      width: 1000px;
+
+      box-shadow: 1000px 0 0  $color-btn, 2000px 0 0  $color-btn, 3000px 0 0  $color-btn;
+    }
+  }
+
+  .form__wrap input[name="cat-data-name"] {
+    width: 505px;
+  }
+
+  .form__wrap input[name="cat-data-weight"] {
+    width: 475px;
+  }
+
+  .form__wrap input[name="cat-data-age"] {
+    width: 435px;
+  }
+
+  .form__wrap input[name="contact-email"] {
+    width: 485px;
+    padding-left: 17px;
+  }
+
+  .form__wrap input[name="contact-tel"] {
+    width: 470px;
+    padding-left: 17px;
   }
 
   .form-cat-data,
@@ -537,25 +587,20 @@ textarea {
     width: 570px;
   }
 
+  .form-comment {
+    margin-bottom: 70px;
+  }
+
   .form-additionally__list {
     justify-content: space-between;
 
     width: 1220px;
 
-    margin-top: 30px;
+    margin-top: 25px;
+    margin-bottom: 7px;
   }
 
   .form-additionally__item {
     width: 245px;
-  }
-
-  .form__btn-wrap {
-    margin-top: 8px;
-    margin-left: 0;
-  }
-
-  .form .form__btn {
-    margin-right: 82px;
-    padding: 17px 222px;
   }
 }

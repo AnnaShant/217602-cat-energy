@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 0 20px;
 
-  &--mobile {
+  &--zero-spacing {
     padding: 0;
   }
 }
@@ -17,7 +17,7 @@
 
 @media #{$desktop-widths} {
   .container {
-    width: 1300px;
-    padding: 0 40px;
+    width: 1440px;
+    padding: 0 110px;
   }
 }

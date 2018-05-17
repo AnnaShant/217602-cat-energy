@@ -1,6 +1,6 @@
 .living-example {
-  padding-top: 1px;
-  padding-bottom: 35px;
+  padding-top: 30px;
+  padding-bottom: 26px;
 
   background-color: #f2f2f2;
 }
@@ -9,13 +9,9 @@
   padding: 0 20px;
 }
 
-.living-example__title {
-  margin-bottom: 36px;
-}
-
 .living-example__text {
-  width: 280px;
   margin-bottom: 25px;
+
   font-family: $font-arial;
   font-size: 14px;
   line-height: 1.3;
@@ -44,8 +40,9 @@
 }
 
 .living-example__result-info {
+  margin-bottom: 28px;
   font-size: 24px;
-  line-height: 0.2;
+  line-height: 0;
 }
 
 .living-example__result-text {
@@ -69,9 +66,10 @@
 }
 
 .living-example__img {
-  margin-bottom: 50px;
+  margin-top: 17px;
+  padding-bottom: 50px;
 
-  &--current {
+  &--lean-cat {
     display: none;
   }
 }
@@ -79,12 +77,9 @@
 .living-example__range {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-
-  width: 200px;
+  justify-content: center;
 
   margin: 0 auto;
-  margin-top: 25px;
 }
 
 .living-example__range-wrap {
@@ -102,54 +97,54 @@
   position: relative;
 
   height: 14px;
-  width: 82px;
-  margin-top: 2px;
+  width: 85px;
+  margin: 0 8px;
+  margin-top: 12px;
 
   background-color: #ffffff;
 
   border: 1px solid #cdcdcd;
   border-radius: 5px;
+}
 
-  &::before {
-    content: "";
+.living-example__range-bar-circle {
+  position: absolute;
+  top: 3px;
+  left: 5px;
 
-    position: absolute;
-    top: 3px;
-    left: 5px;
+  height: 6px;
+  width: 35px;
 
-    height: 6px;
-    width: 35px;
-
-    background-color: $color-btn;
-    border-radius: 5px;
-  }
+  background-color: $color-btn;
+  border-radius: 5px;
 }
 
 .living-example__range-btn {
   margin: 0;
   padding: 0;
-  line-height: 0;
+  padding: 10px;
 
   background: none;
 
   border: none;
 
   text-transform: uppercase;
+
+  cursor: pointer;
 }
 
 @media #{$tablet-widths} {
   .living-example {
-    margin-top: -85px;
     padding-bottom: 67px;
 
-    background: linear-gradient(#ffffff 46.5%, transparent 27%), linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
+    background: linear-gradient(#ffffff 57%, transparent 27%), linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
   }
 
   .living-example__wrap {
     display: flex;
     flex-wrap: wrap;
 
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   .living-example__title {
@@ -198,12 +193,12 @@
   }
 
   .living-example__img {
-    margin-bottom: 20px;
+    margin-bottom: 9px;
+    padding: 0;
   }
 
   .living-example__range {
-    width: 570px;
-    margin-top: 0;
+    display: flex;
   }
 
   .living-example__range-bar {
@@ -211,20 +206,20 @@
 
     height: 6px;
     width: 426px;
-    margin-top: 6px;
+    margin: 0 22px;
+    margin-top: 16px;
 
     background-color: #dcdcdc;
 
     border-radius: 5px;
 
     cursor: pointer;
+  }
 
-    &::before {
-      content: "";
-
+  .living-example__range-bar-circle {
       position: absolute;
       top: -12px;
-      left: 47.5%;
+      left: 47%;
 
       height: 32px;
       width: 32px;
@@ -235,14 +230,13 @@
       border-radius: 50%;
 
       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-    }
 
-    &::after {
+    &::before {
       content: "";
 
       position: absolute;
-      top: 0;
-      left: 50.3%;
+      top: 35%;
+      left: 35%;
 
       height: 8px;
       width: 8px;
@@ -253,22 +247,19 @@
     }
 
     &:hover {
-      &::before {
         box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
-      }
     }
 
     &:active {
-      &::before {
         border: solid 2px rgb(104, 183, 56);
         box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
-      }
     }
   }
 
   .living-example__range-btn {
-    padding-top: 10px;
-    padding-bottom: 15px;
+    padding: 10px 0;
+    padding-bottom: 4px;
+
     font-size: 20px;
 
     border-bottom: dotted 1px #b8b8b8;
@@ -289,9 +280,9 @@
   .living-example {
     margin-top: 0;
     padding: 0;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 
-    background: linear-gradient(#ffffff 23.9%, transparent 23.9%), linear-gradient(to right, #f2f2f2 67.3%, #eaeaea 32.7%);
+    background: linear-gradient(#ffffff 26%, transparent 23.9%), linear-gradient(to right, #f2f2f2 67.3%, #eaeaea 32.7%);
   }
 
   .living-example__container {
@@ -321,7 +312,7 @@
 
   .living-example__range-wrap {
     width: 610px;
-    margin-top: -150px;
+    margin-top: -180px;
   }
 
   .living-example__cost {

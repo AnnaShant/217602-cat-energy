@@ -2,11 +2,12 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML&nbsp;Academy: Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page">
-    <header class="page-header container container--mobile">
+    <header class="page-header container container--zero-spacing">
 
       <div class="page-header__logo logo">
         <a class="logo__link" href="index.html">
@@ -37,7 +38,7 @@
 
     <main class="page-main">
       <div class="container">
-        <h1 class="page-main__title title-block-index">Каталог продукции</h1>
+        <h1 class="page-main__title">Каталог продукции</h1>
 
         <div class="products-wrap">
           <article class="products-wrap__box product">
@@ -70,7 +71,7 @@
                 </dl>
               </div>
 
-              <a class="product__btn btn-block" href="#">Заказать</a>
+              <a class="btn btn--product" href="#">Заказать</a>
             </div>
           </article>
 
@@ -104,7 +105,7 @@
                 </dl>
               </div>
 
-              <a class="product__btn btn-block" href="#">Заказать</a>
+              <a class="btn btn--product" href="#">Заказать</a>
             </div>
           </article>
 
@@ -138,7 +139,7 @@
                 </dl>
               </div>
 
-              <a class="product__btn btn-block" href="#">Заказать</a>
+              <a class="btn btn--product" href="#">Заказать</a>
             </div>
           </article>
 
@@ -172,7 +173,7 @@
                 </dl>
               </div>
 
-              <a class="product__btn btn-block" href="#">Заказать</a>
+              <a class="btn btn--product" href="#">Заказать</a>
             </div>
           </article>
 
@@ -206,7 +207,7 @@
                 </dl>
               </div>
 
-              <a class="product__btn btn-block" href="#">Заказать</a>
+              <a class="btn btn--product" href="#">Заказать</a>
             </div>
           </article>
 
@@ -240,7 +241,7 @@
                 </dl>
               </div>
 
-              <a class="product__btn btn-block" href="#">Заказать</a>
+              <a class="btn btn--product" href="#">Заказать</a>
             </div>
           </article>
 
@@ -274,14 +275,16 @@
                 </dl>
               </div>
 
-              <a class="product__btn btn-block" href="#">Заказать</a>
+              <a class="btn btn--product" href="#">Заказать</a>
             </div>
           </article>
 
           <section class="products-wrap__more">
-            <h3 class="products-wrap__more-title">Показать еще 100500 товаров</h3>
-            <p class="products-wrap__more-text">На&nbsp;самом деле вкусов гораздо больше!</p>
-            <a class="products-wrap__more-btn" href="#">Показать все</a>
+            <div class="product-wrap__box">
+              <h3 class="products-wrap__more-title">Показать еще 100500 товаров</h3>
+              <p class="products-wrap__more-text">На&nbsp;самом деле вкусов гораздо больше!</p>
+              <a class="products-wrap__more-btn" href="#">Показать все</a>
+            </div>
           </section>
         </div>
       </div>
@@ -295,52 +298,46 @@
               <h4 class="goods-list__item-title">Сахарозаменитель</h4>
               <span class="goods-list__item-amount">1&nbsp;упаковка (100&nbsp;г)</span>
               <span class="goods-list__item-val">100&nbsp;Р.</span>
-              <a class="goods-list__btn btn-block" href="#">Заказать</a>
+              <a class="btn btn--goods-list" href="#">Заказать</a>
             </li>
 
             <li class="goods-list__item">
               <h4 class="goods-list__item-title">Питьевая вода</h4>
               <span class="goods-list__item-amount">5&nbsp;литров</span>
               <span class="goods-list__item-val">50&nbsp;Р.</span>
-              <a class="goods-list__btn btn-block" href="#">Заказать</a>
+              <a class="btn btn--goods-list" href="#">Заказать</a>
             </li>
 
             <li class="goods-list__item">
               <h4 class="goods-list__item-title">Молоко</h4>
               <span class="goods-list__item-amount">1&nbsp;литр</span>
               <span class="goods-list__item-val">100&nbsp;Р.</span>
-              <a class="goods-list__btn btn-block" href="#">Заказать</a>
+              <a class="btn btn--goods-list" href="#">Заказать</a>
             </li>
 
             <li class="goods-list__item">
               <h4 class="goods-list__item-title">Витамины</h4>
               <span class="goods-list__item-amount">1&nbsp;упаковка (30&nbsp;г)</span>
               <span class="goods-list__item-val">300&nbsp;Р.</span>
-              <a class="goods-list__btn btn-block" href="#">Заказать</a>
+              <a class="btn btn--goods-list" href="#">Заказать</a>
             </li>
           </ul>
           <!--Это же блочек с подарком и фоном с котом.-->
           <div class="additional__all">
-            <img class="additional__all-image" src="img/icon-gift.svg" alt="Подарок" width="55" height="60">
             <p class="additional__all-text">Закажите все и&nbsp;получите чехол для кота в&nbsp;подарок!</p>
           </div>
         </div>
       </section>
 
       <section class="map">
-        <h2 class="visually-hidden">Карта</h2>
-        <div class="map__wrap">
-          <div class="map__box-text container">
-            <p class="map__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-            <p class="map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-          </div>
+        <h2 class="visually-hidden">Как нас найти</h2>
+        <div class="map__wrap container">
+          <p class="map__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+          <p class="map__adress">ул. Большая Конюшенная, д. 19/8 <span class="map__city">Санкт-Петербург</span></p>
         </div>
-        <iframe class="map__interactive" src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.576107178979!2d30.321962135596618!3d59.939175757766854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1522580251050' height='362' allowfullscreen></iframe>
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-          <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
-        </picture>
+        <div class="map__interactive">
+          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d890.2868183647082!2d30.32253734160184!3d59.938344018840546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1517783202567" allowfullscreen></iframe>
+        </div>
       </section>
     </main>
 
@@ -401,9 +398,10 @@
         </div>
 
         <div class="page-footer__academy footer-academy">
-          <a class="footer-academy__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="footer-academy__link footer-academy__link--logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg class="footer-academy__svg" xmlns="http://www.w3.org/2000/svg" width="40" height="47" viewBox="0 0 60 60"><path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
+          <a class="footer-academy__link" href="https://htmlacademy.ru/intensive/adaptive"><span>HTML Academy</span>
+            <svg class="footer-academy__svg" xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 60 60">
+              <path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
+            </svg>
           </a>
         </div>
       </div>

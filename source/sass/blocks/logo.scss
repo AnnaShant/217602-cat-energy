@@ -1,23 +1,27 @@
 .logo {
-  padding: 0 20px;
-  padding-bottom: 10px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 20px;
 
   border-bottom: 1px solid #e6e6e6;
 
-  &:hover {
-    opacity: 0.8;
-  }
+.logo__link[href="index.html"] {
+    &:hover {
+      opacity: 0.8;
+    }
 
-  &:active {
-    opacity: 0.6;
+    &:active {
+      opacity: 0.6;
+    }
   }
 }
 
 @media #{$tablet-widths} {
   .logo {
-    margin-right: 50px;
+    width: 173px;
+    height: 58px;
     padding: 0;
-    padding-bottom: 12px;
+    padding-top: 11px;
 
     border: none;
   }
@@ -25,7 +29,6 @@
 
 @media #{$desktop-widths} {
   .logo {
-    width: 245px;
-    margin-top: -12px;
+    width: 204px;
   }
 }
