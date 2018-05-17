@@ -14,6 +14,36 @@
   position: relative;
 
   margin-bottom: 17px;
+
+  &--mail input {
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-size: 17px 14px;
+    background-position: 183px;
+
+    &:focus {
+      background-image: url("../img/icon-mail-green.svg");
+    }
+
+    &:invalid {
+      background-image: url("../img/icon-mail-red.svg");
+    }
+  }
+
+  &--tel input {
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 167px;
+
+    &:focus {
+      background-image: url("../img/icon-phone-green.svg");
+    }
+
+    &:invalid {
+      background-image: url("../img/icon-phone-red.svg");
+    }
+  }
 }
 
 .form__wrap input,
@@ -200,38 +230,6 @@
   border: none;
 }
 
-.form__wrap {
-  &--mail input {
-    background-image: url("../img/icon-mail.svg");
-    background-repeat: no-repeat;
-    background-size: 17px 14px;
-    background-position: 183px;
-
-   &:focus {
-     background-image: url("../img/icon-mail-green.svg");
-   }
-
-   &:invalid {
-     background-image: url("../img/icon-mail-red.svg");
-   }
-  }
-
-  &--tel input {
-    background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    background-position: 167px;
-
-   &:focus {
-     background-image: url("../img/icon-phone-green.svg");
-   }
-
-   &:invalid {
-     background-image: url("../img/icon-phone-red.svg");
-   }
-  }
-}
-
 .form-comment {
   margin: 0;
   margin-bottom: 25px;
@@ -334,6 +332,14 @@
 
   .form__wrap {
     margin-bottom: 23px;
+
+    &--mail input {
+      background-position: 515px;
+    }
+
+    &--tel input {
+      background-position: 495px;
+    }
   }
 
   .form__wrap input {
@@ -367,16 +373,6 @@
     width: 530px;
     padding: 14px 0;
     padding-left: 22px;
-  }
-
-  .form__wrap {
-    &--mail input {
-      background-position: 515px;
-    }
-
-    &--tel input {
-      background-position: 495px;
-    }
   }
 
   .form-option {

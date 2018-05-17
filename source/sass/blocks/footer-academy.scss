@@ -9,7 +9,12 @@
   text-transform: none;
   color: #444444;
 
-  &:active {
+  &:hover .footer-academy__svg {
+    fill: $color-btn;
+  }
+
+  &:active .footer-academy__svg {
+    fill: #68b738;
     opacity: 0.3;
   }
 }
@@ -23,17 +28,6 @@
   height: 47px;
 
   fill: #666666;
-}
-
-.footer-academy__link {
-  &:hover .footer-academy__svg {
-    fill: $color-btn;
-  }
-
-  &:active .footer-academy__svg {
-    fill: #68b738;
-    opacity: 0.3;
-  }
 }
 
 @media #{$tablet-widths} {
