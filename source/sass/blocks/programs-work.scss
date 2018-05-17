@@ -1,9 +1,6 @@
 .programs-work {
-  margin-bottom: 47px;
-}
-
-.programs-work__title {
-  margin-bottom: 41px;
+  padding-top: 26px;
+  padding-bottom: 20px;
 }
 
 .programs-work__list {
@@ -13,7 +10,7 @@
 .programs-work__item {
   position: relative;
 
-  margin-bottom: 26px;
+  padding-bottom: 26px;
   padding-left: 80px;
 
   font-family: $font-arial;
@@ -33,50 +30,50 @@
     height: 60px;
 
     background-color: $color-btn;
+
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &--leaf::before {
     background-image: url("../img/advantage-leaf@1x.png");
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   &--powder::before {
     background-image: url("../img/advantage-powder@1x.png");
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   &--dining::before {
     background-image: url("../img/advantage-dining@1x.png");
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   &--clock::before {
     background-image: url("../img/advantage-clock@1x.png");
-    background-repeat: no-repeat;
-    background-position: center;
   }
 }
 
 @media #{$tablet-widths} {
-  .programs-work__title {
-    margin-bottom: 70px;
+  .programs-work {
+    border-bottom: 1px solid #e6e6e6;
   }
 
   .programs-work__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    margin-top: 70px;
+    padding-bottom: 35px;
   }
 
   .programs-work__item {
     flex-basis: 45%;
-    margin-bottom: 135px;
+
     margin-right: 5px;
-    padding-left: 0;
+    margin-bottom: 85px;
     padding-top: 110px;
+    padding-bottom: 50px;
+    padding-left: 0;
 
     font-size: 16px;
 
@@ -84,6 +81,26 @@
       width: 80px;
       height: 80px;
     }
+  }
+
+  .programs-work__number {
+    display: block;
+
+    position: absolute;
+    top: -80px;
+    right: 70px;
+    z-index: -1;
+
+    width: 137px;
+    height: 288px;
+
+    color: #f2f2f2;
+    font-family: $font-oswald;
+    font-size: 280px;
+  }
+
+  .programs-work__item:nth-last-child(-n+2) {
+    margin-bottom: 0;
   }
 
   .programs-work__text {
@@ -96,16 +113,36 @@
 
 @media #{$desktop-widths} {
   .programs-work {
-    margin-bottom: 130px;
+    border: none;
   }
 
   .programs-work__item {
     flex-basis: 20%;
 
     margin: 0;
+
+    &--leaf::after {
+      right: 50px;
+    }
+
+    &--powder::after {
+      right: 10px;
+    }
+
+    &--dining::after {
+      right: 10px;
+    }
+
+    &--clock::after {
+      right: 0;
+    }
   }
 
   .programs-work__title {
     margin-bottom: 72px;
+  }
+
+  .programs-work__number {
+    right: 0;
   }
 }

@@ -1,27 +1,36 @@
 .page-main__title {
-  margin-bottom: 40px;
+  margin: 0;
+  padding: 0;
+  padding-top: 28px;
+  padding-bottom: 36px;
+
   font-size: 36px;
   font-weight: 400;
+  line-height: 1;
   text-transform: none;
 }
 
 .page-main__text {
   width: 227px;
-  margin-top: -10px;
+  margin: 0;
+  padding: 0;
 
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 @media #{$tablet-widths} {
   .page-main__title {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 65px;
+    padding-bottom: 50px;
+
+    font-size: 60px;
   }
 
   .page-main__text {
     width: 384px;
-    margin-top: 28px;
+    margin: 0;
+    padding: 0;
     padding-left: 40px;
 
     font-size: 20px;
@@ -30,6 +39,10 @@
 }
 
 @media #{$desktop-widths} {
+  .page-main__title {
+    padding-top: 80px;
+  }
+
   .page-main__text {
     padding-left: 0;
   }

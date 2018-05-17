@@ -20,11 +20,11 @@
 
 .menu-list__link[href] {
   &:hover {
-    color: rgba(0, 0, 0, 0.6);
+    opacity: 0.6;
   }
 
   &:active {
-    color: rgba(0, 0, 0, 0.3);
+    opacity: 0.3;
   }
 }
 
@@ -34,16 +34,12 @@
     flex-wrap: wrap;
   }
 
-  .menu-list__item {
+  .menu-list__item:not(:last-child) {
     margin-right: 35px;
   }
 
-  .menu-list__item:last-child {
-    margin-right: 0;
-  }
-
   .menu-list__link {
-    padding: 0;
+    padding-top: 7px;
     padding-bottom: 7px;
 
     font-size: 18px;

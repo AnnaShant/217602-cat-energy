@@ -2,6 +2,10 @@
   width: 320px;
   margin: 0 auto;
   padding: 0 20px;
+
+  &--zero-spacing {
+    padding: 0;
+  }
 }
 
 @media #{$tablet-widths} {
@@ -13,7 +17,7 @@
 
 @media #{$desktop-widths} {
   .container {
-    width: 1300px;
-    padding: 0 40px;
+    width: 1440px;
+    padding: 0 110px;
   }
 }

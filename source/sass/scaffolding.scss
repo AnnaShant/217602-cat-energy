@@ -31,3 +31,19 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+::-webkit-input-placeholder {
+  text-transform: uppercase;
+}
+
+::-moz-placeholder {
+  text-transform: uppercase;
+}
+
+:-moz-placeholder {
+  text-transform: uppercase;
+}
+
+:-ms-input-placeholder {
+  text-transform: uppercase;
+}

@@ -1,5 +1,5 @@
-@import "base/normalize.scss";
-@import "base/fonts.scss";
+@import "normalize.scss";
+@import "fonts.scss";
 @import "scaffolding.scss";
 @import "variables.scss";
 @import "mixins.scss";
@@ -19,10 +19,10 @@
 @import "blocks/products-wrap.scss";
 @import "blocks/programs-cats.scss";
 @import "blocks/programs-work.scss";
-@import "blocks/selection-program-box";
+@import "blocks/selection-program";
 @import "blocks/footer-academy.scss";
 @import "blocks/footer-logo.scss";
 @import "blocks/logo.scss";
-@import "blocks/btn-block.scss";
+@import "blocks/btn.scss";
 @import "blocks/social.scss";
-@import "blocks/title-block-index.scss";
+@import "blocks/title-index.scss";

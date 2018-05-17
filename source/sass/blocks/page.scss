@@ -1,5 +1,5 @@
 .page {
-  width: auto;
+  min-width: 320px;
   margin: 0 auto;
   padding: 0;
 
@@ -8,4 +8,14 @@
   line-height: 1.4;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+@media #{$desktop-widths} {
+  .page__header {
+    min-height: $height-header;
+  }
+
+  .page__selection-program {
+    margin-top: -$height-header;
+  }
 }
