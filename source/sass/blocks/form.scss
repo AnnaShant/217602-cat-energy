@@ -228,7 +228,7 @@
 .form-option__item {
   position: relative;
 
-  padding-bottom: 17px;
+  padding-bottom: 12px;
 
   outline: none;
 }
@@ -264,7 +264,7 @@
 
 .form-additionally {
   margin: 0;
-  margin-bottom: 21px;
+  margin-bottom: 15px;
   padding: 0;
 
   border: none;
@@ -278,7 +278,7 @@
 .form-additionally input + label {
   position: relative;
 
-  padding-top: 6px;
+  padding-top: 3px;
   padding-bottom: 6px;
   padding-left: 45px;
 
@@ -295,7 +295,6 @@
     width: 30px;
     height: 30px;
 
-    box-sizing: border-box;
     border: 1px solid #cdcdcd;
   }
 
@@ -325,18 +324,18 @@
   background-repeat: no-repeat;
 }
 
-  .form-additionally input:focus + label::before{
-    opacity: 0.6;
-    transition: opacity 0.2s;
-  }
+.form-additionally input:focus + label::before{
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
 
 .form-additionally__list {
   @include reset-list();
-  margin-top: 3px;
+  margin-top: 5px;
 }
 
 .form-additionally__item {
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 
   outline: none;
 }
@@ -426,9 +425,11 @@
     margin-bottom: 8px;
   }
 
-  .form-option label {
-    padding-left: 56px;
+  .form-option input + label {
+    padding-left: 60px;
+  }
 
+  .form-option label {
     &::before {
       top: -2px;
       left: -2px;
@@ -438,12 +439,28 @@
     }
   }
 
+  .form-option input + label {
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .form-option input:checked + label {
+    &::after {
+    top: 11px;
+    left: 11px;
+    }
+  }
+
   .form-option input:checked + label::after {
     width: 18px;
     height: 18px;
   }
 
   .form__title {
+    margin-left: -28px;
+
     font-size: 36px;
 
     &::before {
@@ -495,7 +512,7 @@
     padding-top: 15px;
   }
 
-  .form-additionally label {
+  .form-additionally input + label {
     padding-left: 60px;
   }
 
@@ -522,7 +539,7 @@
 
     width: 708px;
 
-    margin-top: 25px;
+    margin-top: 30px;
   }
 
   .form-additionally__item {
@@ -640,12 +657,16 @@
     margin-bottom: 70px;
   }
 
+  .form-additionally input + label {
+    padding-top: 0;
+  }
+
   .form-additionally__list {
     justify-content: space-between;
 
     width: 1220px;
 
-    margin-top: 25px;
+    margin-top: 30px;
     margin-bottom: 7px;
   }
 

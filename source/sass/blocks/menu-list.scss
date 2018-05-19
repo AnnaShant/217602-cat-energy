@@ -59,7 +59,7 @@
 @media #{$desktop-widths} {
   .menu-list {
     &--index {
-      background-color: $color-btn;
+      background-color: rgba(100, 168, 59, 0);
     }
 
     &--index .menu-list__link {

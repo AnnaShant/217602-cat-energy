@@ -14,9 +14,6 @@
 .map__wrap {
   display: flex;
 
-  width: 320px;
-  padding: 0 20px;
-
   padding-top: 14px;
   padding-bottom: 8px;
 
@@ -53,6 +50,10 @@
   width: 100%;
 
   background-image: url("../img/bg-map-mobile@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
+  }
 }
 
 .map__iframe {
@@ -68,8 +69,7 @@
   }
 
   .map__wrap {
-    width: 768px;
-    padding: 0 70px;
+    padding: 0 40px;
     padding-top: 47px;
     padding-bottom: 40px;
   }
@@ -91,12 +91,21 @@
     text-align: right;
   }
 
+  .map__city {
+    display: block;
+    margin-top: 20px;
+  }
+
   .map__interactive {
     top: 202px;
 
     min-height: 400px;
 
     background-image: url("../img/bg-map-tablet@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
   }
 
   .map__iframe {
@@ -135,5 +144,9 @@
     top: 0;
 
     background-image: url("../img/bg-map-desktop@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
   }
 }

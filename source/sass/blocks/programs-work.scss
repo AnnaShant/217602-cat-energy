@@ -3,6 +3,10 @@
   padding-bottom: 20px;
 }
 
+.programs-work__title {
+  padding-bottom: 43px;
+}
+
 .programs-work__list {
   @include reset-list();
 }
@@ -57,6 +61,11 @@
     border-bottom: 1px solid #e6e6e6;
   }
 
+  .programs-work__title {
+    padding-top: 18px;
+    padding-bottom: 0;
+  }
+
   .programs-work__list {
     counter-reset: number;
 
@@ -78,6 +87,7 @@
     padding-top: 110px;
     padding-bottom: 50px;
     padding-left: 0;
+    padding-right: 80px;
 
     font-size: 16px;
     line-height: 1.5;
@@ -114,10 +124,15 @@
     border: none;
   }
 
+  .programs-work__title {
+    padding-top: 40px;
+  }
+
   .programs-work__item {
     flex-basis: 20%;
 
     margin: 0;
+    padding-right: 0;
 
     &--leaf::after {
       right: 50px;
@@ -138,9 +153,5 @@
     &::after {
       right: 0;
     }
-  }
-
-  .programs-work__title {
-    margin-bottom: 72px;
   }
 }
