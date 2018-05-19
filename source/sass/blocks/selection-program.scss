@@ -105,23 +105,23 @@
     background: linear-gradient(to right, #ffffff 50%, #63a73a 50%);
   }
 
-.selection-program__container {
-  &::after {
-    top: -6px;
-    right: 0;
-    left: auto;
-    z-index: -1;
+  .selection-program__container {
+    &::after {
+      top: -6px;
+      right: 0;
+      left: auto;
+      z-index: -1;
 
-    display: block;
-    width: 720px;
-    height: 696px;
+      display: block;
+      width: 720px;
+      height: 696px;
 
-    background-position: top right;
+      background-position: top right;
 
-    background-image: url("../img/index-background-desktop@1x.jpg");
+      background-image: url("../img/index-background-desktop@1x.jpg");
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/index-background-desktop@2x.jpg");
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
       }
     }
   }

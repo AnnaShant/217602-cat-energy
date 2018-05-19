@@ -35,9 +35,10 @@
   padding-top: 95px;
   padding-bottom: 20px;
 
-  background-color: $color-btn;
   background: url("../img/icon-gift.svg") 50% 30% no-repeat, url("../img/gift-photo-mobile@1x.jpg") no-repeat;
+  background-color: $color-btn;
   background-size: auto, cover;
+
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");

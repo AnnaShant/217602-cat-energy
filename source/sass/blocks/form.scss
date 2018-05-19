@@ -199,7 +199,7 @@
 }
 
 .form-option input:checked + label {
-    &::after {
+  &::after {
     content: "";
     position: absolute;
     top: 9px;
@@ -214,9 +214,9 @@
   }
 }
 
-.form-option input:focus + label::before{
+.form-option input:focus + label::before {
   opacity: 0.6;
-  transition: opacity 0.2s ;
+  transition: opacity 0.2s;
 }
 
 .form-option__list {
@@ -324,7 +324,7 @@
   background-repeat: no-repeat;
 }
 
-.form-additionally input:focus + label::before{
+.form-additionally input:focus + label::before {
   opacity: 0.6;
   transition: opacity 0.2s;
 }
@@ -427,6 +427,11 @@
 
   .form-option input + label {
     padding-left: 60px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   .form-option label {
@@ -439,23 +444,14 @@
     }
   }
 
-  .form-option input + label {
-    &::before {
-      width: 40px;
-      height: 40px;
-    }
-  }
-
   .form-option input:checked + label {
     &::after {
-    top: 11px;
-    left: 11px;
-    }
-  }
+      top: 11px;
+      left: 11px;
 
-  .form-option input:checked + label::after {
-    width: 18px;
-    height: 18px;
+      width: 18px;
+      height: 18px;
+    }
   }
 
   .form__title {
@@ -514,9 +510,7 @@
 
   .form-additionally input + label {
     padding-left: 60px;
-  }
 
-  .form-additionally input + label {
     &::before {
       top: -5px;
 
