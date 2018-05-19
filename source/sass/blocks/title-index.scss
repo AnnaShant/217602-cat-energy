@@ -6,40 +6,10 @@
   font-weight: 400;
   line-height: 1;
   text-transform: none;
-
-  &--programs-work {
-    margin-bottom: 42px;
-  }
-
-  &--living-example {
-    margin-bottom: 35px;
-  }
 }
 
 @media #{$tablet-widths} {
   .title-index {
     font-size: 60px;
-
-    &--programs-work {
-      margin-bottom: 0;
-      padding-top: 18px;
-    }
-
-    &--living-example {
-      margin-bottom: 47px;
-      padding-top: 14px;
-    }
-  }
-}
-
-@media #{$desktop-widths} {
-  .title-index {
-    &--programs-work {
-      padding-top: 44px;
-    }
-
-    &--living-example {
-      padding-top: 24px;
-    }
   }
 }

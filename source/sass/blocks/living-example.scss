@@ -5,6 +5,10 @@
   background-color: #f2f2f2;
 }
 
+.living-example__title {
+  margin-bottom: 35px;
+}
+
 .living-example__box {
   padding: 0 20px;
 }
@@ -148,6 +152,7 @@
 
   .living-example__title {
     margin-bottom: 47px;
+    padding-top: 14px;
   }
 
   .living-example__text {
@@ -247,11 +252,13 @@
 
     &:hover {
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+      transition: box-shadow 0.2s;
     }
 
     &:active {
       border: solid 2px rgb(104, 183, 56);
       box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      transition: none;
     }
   }
 
@@ -300,6 +307,10 @@
     width: 450px;
     margin-top: 100px;
     margin-bottom: 68px;
+  }
+
+  .living-example__title {
+    padding-top: 24px;
   }
 
   .living-example__result {

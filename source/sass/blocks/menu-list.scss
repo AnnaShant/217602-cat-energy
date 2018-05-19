@@ -21,10 +21,12 @@
 .menu-list__link[href] {
   &:hover {
     opacity: 0.6;
+    transition: opacity 0.2s;
   }
 
   &:active {
     opacity: 0.3;
+    transition: none;
   }
 }
 

@@ -15,43 +15,27 @@
 
   margin-bottom: 17px;
 
-  &--mail input {
-    background-image: url("../img/icon-mail.svg");
-    background-repeat: no-repeat;
-    background-size: 17px 14px;
-    background-position: 183px;
-
-    &:focus {
-      background-image: url("../img/icon-mail-green.svg");
-    }
-
-    &:invalid {
-      background-image: url("../img/icon-mail-red.svg");
-    }
+  &--mail svg {
+    position: absolute;
+    top: 15px;
+    right: 18px;
   }
 
-  &--tel input {
-    background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    background-position: 167px;
-
-    &:focus {
-      background-image: url("../img/icon-phone-green.svg");
-    }
-
-    &:invalid {
-      background-image: url("../img/icon-phone-red.svg");
-    }
+  &--tel svg {
+    position: absolute;
+    top: 12px;
+    right: 15px;
   }
 }
 
+.form__wrap input::placeholder,
+.form-comment textarea::placeholder {
+  text-transform: uppercase;
+}
+
 .form__wrap input,
-.form__wrap input[name="contact-email"],
-.form__wrap input[name="contact-tel"],
 .form-comment textarea {
-  padding: 12px 0;
-  padding-left: 15px;
+  padding: 12px 15px;
 
   border: none;
   outline: 1px solid #e6e6e6;
@@ -59,17 +43,20 @@
   &:hover {
     border: none;
     outline: 1px solid rgb(205, 205, 205);
+    transition: outline 0.2s;
   }
 
   &:focus,
   &:active {
     border: none;
     outline: 2px solid rgb(68, 68, 68);
+    transition: none;
   }
 
   &:invalid {
     border: none;
     outline: 2px solid rgb(255, 130, 130);
+    transition: none;
   }
 }
 
@@ -87,10 +74,24 @@
 
 .form__wrap input[name="contact-email"] {
   width: 217px;
+  padding-right: 40px;
 }
 
 .form__wrap input[name="contact-tel"] {
   width: 202px;
+  padding-right: 40px;
+}
+
+.form__wrap input[name="contact-email"],
+.form__wrap input[name="contact-tel"] {
+  &:active,
+  &:focus + svg {
+    fill: $color-btn;
+  }
+
+  &:invalid + svg {
+    fill: #ff8282;
+  }
 }
 
 .form__wrap label {
@@ -153,16 +154,19 @@
   border-bottom: 1px solid #e6e6e6;
 }
 
-.form-option input {
-  display: none;
-}
-
 .form-option label {
-  position: relative;
   display: block;
 
   padding-top: 7px;
   padding-left: 46px;
+}
+
+.form-option input + label {
+  position: relative;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 45px;
 
   cursor: pointer;
 
@@ -172,32 +176,47 @@
     top: 0;
     left: 0;
 
+    display: block;
+
     width: 30px;
     height: 30px;
 
-    box-sizing: border-box;
-
-    border: 1px solid rgb(205, 205, 205);
+    border: 1px solid #cdcdcd;
     border-radius: 50%;
   }
 
-  &:hover::before {
-    border: 1px solid rgb(186, 186, 186);
+  &:hover {
+    &::before {
+      border-color: #bababa;
+      transition: border-color 0.2s;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: none;
   }
 }
 
-.form-option input:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 9px;
-  left: 9px;
+.form-option input:checked + label {
+    &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 9px;
 
-  width: 12px;
-  height: 12px;
+    width: 12px;
+    height: 12px;
 
-  background-color: $color-btn;
+    background-color: $color-btn;
 
-  border-radius: 50%;
+    border-radius: 50%;
+  }
+}
+
+.form-option input:focus + label::before{
+  opacity: 0.6;
+  transition: opacity 0.2s ;
 }
 
 .form-option__list {
@@ -207,14 +226,11 @@
 }
 
 .form-option__item {
+  position: relative;
+
   padding-bottom: 17px;
 
   outline: none;
-
-  &:active,
-  &:focus {
-    opacity: 0.6;
-  }
 }
 
 .form-option__item:last-child {
@@ -243,7 +259,7 @@
   min-height: 150px;
   padding-top: 15px;
 
-  resize: none;
+  resize: vertical;
 }
 
 .form-additionally {
@@ -254,10 +270,6 @@
   border: none;
 }
 
-.form-additionally input {
-  display: none;
-}
-
 .form-additionally label {
   padding-top: 4px;
   padding-left: 46px;
@@ -265,7 +277,10 @@
 
 .form-additionally input + label {
   position: relative;
-  display: block;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 45px;
 
   cursor: pointer;
 
@@ -275,14 +290,25 @@
     top: 0;
     left: 0;
 
+    display: block;
+
     width: 30px;
     height: 30px;
 
-    border: 1px solid rgb(205, 205, 205);
+    box-sizing: border-box;
+    border: 1px solid #cdcdcd;
   }
 
-  &:hover::before {
-    border: 1px solid rgb(186, 186, 186);
+  &:hover {
+    &::before {
+      border-color: #bababa;
+      transition: border-color 0.2s;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: none;
   }
 }
 
@@ -299,6 +325,11 @@
   background-repeat: no-repeat;
 }
 
+  .form-additionally input:focus + label::before{
+    opacity: 0.6;
+    transition: opacity 0.2s;
+  }
+
 .form-additionally__list {
   @include reset-list();
   margin-top: 3px;
@@ -308,15 +339,18 @@
   padding-bottom: 20px;
 
   outline: none;
-
-  &:active,
-  &:focus {
-    opacity: 0.6;
-  }
 }
 
 .form-additionally__item input {
   margin-right: 30px;
+}
+
+.form__btn {
+  margin-bottom: 9px;
+  padding: 10px 25px;
+
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 @media #{$tablet-widths} {
@@ -333,18 +367,21 @@
   .form__wrap {
     margin-bottom: 23px;
 
-    &--mail input {
-      background-position: 515px;
+    &--mail svg {
+      position: absolute;
+      top: 20px;
+      right: 15px;
     }
 
-    &--tel input {
-      background-position: 495px;
+    &--tel svg {
+      position: absolute;
+      top: 18px;
+      right: 13px;
     }
   }
 
   .form__wrap input {
-    padding: 13px 0;
-    padding-left: 17px;
+    padding: 13px 17px;
   }
 
   .form__wrap label {
@@ -509,6 +546,14 @@
     font-size: 16px;
     line-height: 1;
   }
+
+  .form__btn {
+    width: auto;
+    margin-right: 63px;
+    padding: 16px 65px;
+
+    font-size: 20px;
+  }
 }
 
 @media #{$desktop-widths} {
@@ -524,12 +569,16 @@
   }
 
   .form__wrap {
-    &--mail input {
-      background-position: 450px;
+    &--mail svg {
+      position: absolute;
+      top: 19px;
+      right: 20px;
     }
 
-    &--tel input {
-      background-position: 430px;
+    &--tel svg {
+      position: absolute;
+      top: 15px;
+      right: 20px;
     }
   }
 
@@ -555,12 +604,16 @@
 
   .form__wrap input[name="contact-email"] {
     width: 485px;
+    padding: 14px 0;
     padding-left: 17px;
+    padding-right: 50px;
   }
 
   .form__wrap input[name="contact-tel"] {
     width: 470px;
+    padding: 14px 0;
     padding-left: 17px;
+    padding-right: 50px;
   }
 
   .form-cat-data,
@@ -598,5 +651,10 @@
 
   .form-additionally__item {
     width: 245px;
+  }
+
+  .form__btn {
+    margin-right: 82px;
+    padding: 17px 208px;
   }
 }

@@ -59,6 +59,17 @@
     font-size: 20px;
     color: #000000;
   }
+
+  .selection-program__btn {
+    width: auto;
+    padding: 17px 26px;
+
+    position: absolute;
+    top: 293px;
+    left: 120px;
+
+    font-size: 20px;
+  }
 }
 
 @media #{$desktop-widths} {
@@ -84,5 +95,10 @@
     position: absolute;
     top: 135px;
     right: 330px;
+  }
+
+  .selection-program__btn {
+    position: static;
+    margin-left: 78px;
   }
 }
