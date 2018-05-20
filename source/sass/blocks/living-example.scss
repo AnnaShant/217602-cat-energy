@@ -5,6 +5,10 @@
   background-color: #f2f2f2;
 }
 
+.living-example__title {
+  margin-bottom: 35px;
+}
+
 .living-example__box {
   padding: 0 20px;
 }
@@ -148,6 +152,7 @@
 
   .living-example__title {
     margin-bottom: 47px;
+    padding-top: 14px;
   }
 
   .living-example__text {
@@ -191,13 +196,42 @@
     text-align: right;
   }
 
+  .living-example__range-wrap {
+    position: relative;
+    min-height: 585px;
+  }
+
+  .living-example__img-wrap {
+    position: absolute;
+    min-height: 530px;
+    width: 350px;
+
+    overflow: hidden;
+
+    &--lean-cat {
+      left: 350px;
+    }
+  }
+
   .living-example__img {
-    margin-bottom: 9px;
-    padding: 0;
+    min-width: 690px;
+
+    &--fat-cat {
+      margin-left: 10px;
+    }
+
+    &--lean-cat {
+      display: block;
+      margin-left: -336px;
+    }
   }
 
   .living-example__range {
     display: flex;
+
+    position: absolute;
+    left: 68px;
+    bottom: 0;
   }
 
   .living-example__range-bar {
@@ -218,7 +252,7 @@
   .living-example__range-bar-circle {
     position: absolute;
     top: -12px;
-    left: 47%;
+    left: 47.5%;
 
     height: 32px;
     width: 32px;
@@ -235,7 +269,7 @@
 
       position: absolute;
       top: 35%;
-      left: 35%;
+      left: 36%;
 
       height: 8px;
       width: 8px;
@@ -247,11 +281,13 @@
 
     &:hover {
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+      transition: box-shadow 0.2s;
     }
 
     &:active {
       border: solid 2px rgb(104, 183, 56);
       box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      transition: none;
     }
   }
 
@@ -302,6 +338,10 @@
     margin-bottom: 68px;
   }
 
+  .living-example__title {
+    padding-top: 24px;
+  }
+
   .living-example__result {
     flex-basis: 64%;
 
@@ -310,7 +350,7 @@
   }
 
   .living-example__range-wrap {
-    width: 610px;
+    width: 635px;
     margin-top: -180px;
   }
 
@@ -326,16 +366,36 @@
     text-align: left;
   }
 
+  .living-example__img-wrap {
+    &--lean-cat {
+      left: 350px;
+    }
+  }
+
   .living-example__img {
-    margin-bottom: 70px;
+    &--fat-cat {
+      margin-left: -15px;
+    }
+
+    &--lean-cat {
+      display: block;
+      margin-left: -365px;
+    }
   }
 
   .living-example__range {
     margin-top: 16px;
     margin-left: 40px;
+
+    left: 25px;
+    bottom: 28px;
   }
 
   .living-example__result-text {
     background-color: #f2f2f2;
+  }
+
+  .living-example__range-bar-circle {
+    left: 48%;
   }
 }

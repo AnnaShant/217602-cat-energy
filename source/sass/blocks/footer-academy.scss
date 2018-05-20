@@ -11,11 +11,13 @@
 
   &:hover .footer-academy__svg {
     fill: $color-btn;
+    transition: fill 0.2s;
   }
 
   &:active .footer-academy__svg {
     fill: #68b738;
     opacity: 0.3;
+    transition: none;
   }
 }
 

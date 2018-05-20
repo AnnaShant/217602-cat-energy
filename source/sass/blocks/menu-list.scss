@@ -21,10 +21,12 @@
 .menu-list__link[href] {
   &:hover {
     opacity: 0.6;
+    transition: opacity 0.2s;
   }
 
   &:active {
     opacity: 0.3;
+    transition: none;
   }
 }
 
@@ -57,7 +59,7 @@
 @media #{$desktop-widths} {
   .menu-list {
     &--index {
-      background-color: $color-btn;
+      background-color: rgba(100, 168, 59, 0);
     }
 
     &--index .menu-list__link {

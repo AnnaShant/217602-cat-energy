@@ -36,6 +36,10 @@
   text-align: right;
 }
 
+.goods-list__btn {
+  margin-top: 10px;
+}
+
 @media #{$tablet-widths} {
   .goods-list {
     padding: 0 38px;
@@ -63,6 +67,10 @@
 
   .goods-list__item-val {
     width: 93px;
+  }
+
+  .goods-list__btn {
+    margin-top: 12px;
   }
 }
 
@@ -102,5 +110,11 @@
     margin-top: 12px;
 
     text-align: left;
+  }
+
+  .goods-list__btn {
+    width: auto;
+    margin: 0;
+    padding: 10px 91px;
   }
 }

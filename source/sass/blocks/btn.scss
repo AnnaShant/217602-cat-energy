@@ -19,22 +19,12 @@
 
   &:hover {
     background-color: #5eaa2f;
+    transition: background-color 0.2s;
   }
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
-  }
-
-  &--form {
-    margin-bottom: 9px;
-    padding: 10px 25px;
-
-    font-size: 16px;
-    text-transform: uppercase;
-  }
-
-  &--goods-list {
-    margin-top: 10px;
+    transition: none;
   }
 }
 
@@ -44,48 +34,5 @@
 
     font-size: 16px;
     line-height: 1;
-
-    &--selection-program {
-      width: auto;
-      padding: 17px 26px;
-
-      position: absolute;
-      top: 293px;
-      left: 120px;
-
-      font-size: 20px;
-    }
-
-    &--form {
-      width: auto;
-      margin-right: 63px;
-      padding: 16px 65px;
-
-      font-size: 20px;
-    }
-
-    &--goods-list {
-      margin-top: 12px;
-    }
-  }
-}
-
-@media #{$desktop-widths} {
-  .btn {
-    &--selection-program {
-      position: static;
-      margin-left: 78px;
-    }
-
-    &--form {
-      margin-right: 82px;
-      padding: 17px 208px;
-    }
-
-    &--goods-list {
-      width: auto;
-      margin: 0;
-      padding: 10px 91px;
-    }
   }
 }
