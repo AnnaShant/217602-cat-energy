@@ -7,14 +7,13 @@
 
   &::after {
     content: "";
-    display: inline-block;
-    vertical-align: middle;
+    position: absolute;
 
     width: 100px;
     height: 3px;
 
-    margin-right: -100%;
-    margin-left: 25px;
+    top: 15px;
+    left: 245px;
 
     background-color: $color-btn;
 
@@ -66,28 +65,30 @@
 
 @media #{$tablet-widths} {
   .additional__title {
-    margin-left: 10px;
+    margin-left: 40px;
 
     font-size: 36px;
 
     &::before {
       content: "";
-      display: inline-block;
-      vertical-align: middle;
+      position: absolute;
 
-      width: 100%;
+      width: 200px;
       height: 3px;
 
-      margin-left: -100%;
-      margin-right: 25px;
+      top: 25px;
+      left: -645px;
 
       background-color: $color-btn;
 
-      box-shadow: 0 0 200px  $color-btn, 0 0 300px  $color-btn, 0 0 400px  $color-btn;
+      box-shadow: 200px 0 0  $color-btn, 300px 0 0  $color-btn, 400px 0 0  $color-btn;
     }
 
     &::after {
       width: 200px;
+
+      top: 25px;
+      left: 375px;
 
       box-shadow: 200px 0 0  $color-btn, 300px 0 0  $color-btn, 400px 0 0  $color-btn;
     }
@@ -108,7 +109,7 @@
     margin-top: 70px;
     padding-bottom: 48px;
 
-    background: url("../img/icon-gift.svg") 50% 30% no-repeat, url("../img/gift-photo-tablet@1x.jpg") no-repeat;
+    background: url("../img/icon-gift.svg") 14% 50% no-repeat, url("../img/gift-photo-tablet@1x.jpg") no-repeat;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
@@ -134,13 +135,24 @@
   .additional__title {
     margin: 0;
     margin-top: 37px;
-    margin-left: -28px;
     padding-bottom: 30px;
 
-    &::after {
-      width: 1000px;
+    &::before {
+      width: 500px;
 
-      box-shadow: 1000px 0 0  $color-btn, 2000px 0 0  $color-btn, 3000px 0 0  $color-btn;
+      top: 30px;
+      left: -1240px;
+
+      box-shadow: 500px 0 0  $color-btn, 600px 0 0  $color-btn, 700px 0 0  $color-btn;
+    }
+
+    &::after {
+      width: 500px;
+
+      top: 30px;
+      left: 375px;
+
+      box-shadow: 500px 0 0  $color-btn, 600px 0 0  $color-btn, 700px 0 0  $color-btn;
     }
   }
 

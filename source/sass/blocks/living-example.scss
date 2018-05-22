@@ -15,6 +15,7 @@
 
 .living-example__text {
   margin-bottom: 25px;
+  padding-right: 5px;
 
   font-family: $font-arial;
   font-size: 14px;
@@ -204,9 +205,13 @@
   .living-example__img-wrap {
     position: absolute;
     min-height: 530px;
-    width: 350px;
+    width: 305px;
 
     overflow: hidden;
+
+    &--fat-cat {
+      left: 45px;
+    }
 
     &--lean-cat {
       left: 350px;
@@ -217,7 +222,7 @@
     min-width: 690px;
 
     &--fat-cat {
-      margin-left: 10px;
+      margin-left: -30px;
     }
 
     &--lean-cat {
@@ -315,14 +320,16 @@
   .living-example {
     margin-top: 0;
     padding: 0;
-    padding-bottom: 40px;
 
-    background: linear-gradient(#ffffff 26%, transparent 23.9%), linear-gradient(to right, #f2f2f2 67.3%, #eaeaea 32.7%);
+    background: linear-gradient(#ffffff 26.5%, transparent 23.9%), linear-gradient(to right, #f2f2f2 57.3%, #eaeaea 42.7%);
   }
 
   .living-example__container {
     display: flex;
-    justify-content: space-between;
+
+    padding-bottom: 40px;
+
+    background: linear-gradient(#ffffff 6.8%, transparent 6.8%), linear-gradient(to right, #f2f2f2 77%, #eaeaea 23%);
   }
 
   .living-example__wrap {
@@ -350,8 +357,9 @@
   }
 
   .living-example__range-wrap {
-    width: 635px;
+    width: 610px;
     margin-top: -180px;
+    left: 60px;
   }
 
   .living-example__cost {
@@ -367,27 +375,34 @@
   }
 
   .living-example__img-wrap {
+    &--fat-cat {
+      width: 330px;
+
+      left: -25px;
+    }
+
     &--lean-cat {
-      left: 350px;
+      left: 300px;
     }
   }
 
   .living-example__img {
     &--fat-cat {
-      margin-left: -15px;
+      margin-left: -35px;
     }
 
     &--lean-cat {
       display: block;
-      margin-left: -365px;
+
+      margin-left: -355px;
     }
   }
 
   .living-example__range {
     margin-top: 16px;
-    margin-left: 40px;
 
-    left: 25px;
+    left: 0;
+    right: 0;
     bottom: 28px;
   }
 

@@ -80,14 +80,14 @@
   .programs-work__item {
     counter-increment: number;
 
-    flex-basis: 45%;
+    width: 320px;
 
     margin-right: 5px;
     margin-bottom: 85px;
     padding-top: 110px;
     padding-bottom: 50px;
     padding-left: 0;
-    padding-right: 80px;
+    padding-right: 70px;
 
     font-size: 16px;
     line-height: 1.5;
@@ -101,8 +101,8 @@
       content: counter(number);
 
       position: absolute;
-      top: -80px;
-      right: 70px;
+      top: -110px;
+      right: 65px;
       z-index: -1;
 
       width: 137px;
@@ -126,6 +126,7 @@
 
   .programs-work__title {
     padding-top: 40px;
+    padding-bottom: 5px;
   }
 
   .programs-work__item {
