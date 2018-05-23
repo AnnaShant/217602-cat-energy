@@ -28,7 +28,7 @@
     top: 12px;
     right: 15px;
 
-    pointer-events: none
+    pointer-events: none;
   }
 }
 
@@ -465,11 +465,8 @@
   }
 
   .form__wrap input {
-    padding: 14px 17px;
-  }
-
-  .form__wrap input {
     height: 50px;
+    padding: 14px 17px;
   }
 
   .form__wrap label {
@@ -636,6 +633,7 @@
 
   .form__wrap {
     margin-bottom: 22px;
+
     &--mail svg {
       position: absolute;
       top: 19px;

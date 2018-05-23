@@ -99,9 +99,9 @@
 
     padding-bottom: 185px;
 
-    background-color: #63a73a;
     background: url("../img/index-background-desktop@1x.jpg") 112%, linear-gradient(to right, #ffffff 50%, #63a73a 50%) top right;
     background-repeat: no-repeat;
+    background-color: #63a73a;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background: url("../img/index-background-desktop@2x.jpg") 112%, linear-gradient(to right, #ffffff 50%, #63a73a 50%) top right;
