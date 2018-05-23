@@ -71,8 +71,11 @@
 }
 
 .living-example__img {
+  min-width: 320px;
+  min-height: 240px;
   margin-top: 17px;
-  padding-bottom: 50px;
+  margin-left: -20px;
+  margin-bottom: 20px;
 
   &--lean-cat {
     display: none;
@@ -90,7 +93,7 @@
 .living-example__range-wrap {
   position: relative;
 
-  margin-top: 20px;
+  margin-top: 18px;
 }
 
 .living-example__range-text {
@@ -153,12 +156,12 @@
 
   .living-example__title {
     margin-bottom: 47px;
-    padding-top: 14px;
+    padding-top: 12px;
   }
 
   .living-example__text {
     width: 708px;
-    margin-bottom: 52px;
+    margin-bottom: 54px;
 
     font-size: 16px;
     line-height: 1.5;
@@ -169,8 +172,11 @@
   }
 
   .living-example__result-info {
+    padding-top: 4px;
+    padding-bottom: 8px;
+
     font-size: 30px;
-    line-height: 0.4;
+    line-height: 0;
   }
 
   .living-example__result-text {
@@ -199,11 +205,14 @@
 
   .living-example__range-wrap {
     position: relative;
+
     min-height: 585px;
+    margin-left: 5px;
   }
 
   .living-example__img-wrap {
     position: absolute;
+
     min-height: 530px;
     width: 305px;
 
@@ -257,10 +266,9 @@
   .living-example__range-bar-circle {
     position: absolute;
     top: -12px;
-    left: 47.5%;
+    left: 46%;
 
     height: 32px;
-    width: 32px;
 
     background-color: #ffffff;
 
@@ -311,7 +319,7 @@
     }
 
     &:active {
-      border: none;
+      border-bottom: solid 1px rgba(184, 184, 184, 0);
     }
   }
 }
@@ -346,7 +354,7 @@
   }
 
   .living-example__title {
-    padding-top: 24px;
+    padding-top: 20px;
   }
 
   .living-example__result {
@@ -359,7 +367,7 @@
   .living-example__range-wrap {
     width: 610px;
     margin-top: -180px;
-    left: 60px;
+    left: 54px;
   }
 
   .living-example__cost {
@@ -394,16 +402,18 @@
     &--lean-cat {
       display: block;
 
-      margin-left: -355px;
+      margin-left: -360px;
     }
   }
 
   .living-example__range {
-    margin-top: 16px;
-
     left: 0;
     right: 0;
-    bottom: 28px;
+    bottom: 26px;
+  }
+
+  .living-example__result-info {
+    padding-top: 2px;
   }
 
   .living-example__result-text {

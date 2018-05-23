@@ -97,35 +97,19 @@
   .selection-program {
     position: relative;
 
-    padding-bottom: 187px;
+    padding-bottom: 185px;
 
-    background: linear-gradient(to right, #ffffff 50%, #63a73a 50%);
-  }
+    background-color: #63a73a;
+    background: url("../img/index-background-desktop@1x.jpg") 112%, linear-gradient(to right, #ffffff 50%, #63a73a 50%) top right;
+    background-repeat: no-repeat;
 
-  .selection-program__container {
-    &::after {
-      top: -6px;
-      left: 750px;
-      z-index: 1;
-
-      display: block;
-      width: 620px;
-      height: 696px;
-
-      background-position: top right;
-
-      background-size: cover;
-
-      background-image: url("../img/index-background-desktop@1x.jpg");
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/index-background-desktop@2x.jpg");
-      }
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/index-background-desktop@2x.jpg") 112%, linear-gradient(to right, #ffffff 50%, #63a73a 50%) top right;
     }
   }
 
   .selection-program__title {
-    padding-top: 215px;
+    padding-top: 223px;
     padding-bottom: 42px;
     padding-left: 78px;
     padding-right: 660px;
@@ -138,7 +122,7 @@
 
   .selection-program__img {
     position: absolute;
-    top: 135px;
+    top: 145px;
     right: 260px;
     z-index: 2;
   }

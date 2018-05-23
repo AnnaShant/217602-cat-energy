@@ -13,6 +13,7 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var run = require("run-sequence");
 var del = require("del");
+var uglify = require('gulp-uglify');
 
 gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
@@ -62,6 +63,13 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
+gulp.task("compress", function() {
+  return gulp.src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(rename({suffix: ".min"}))
+    .pipe(gulp.dest("build/js"))
+});
+
 gulp.task("serve", function() {
   server.init({
     server: "build/",
@@ -82,6 +90,7 @@ gulp.task("build", function (done) {
   "style",
   "images",
   "html",
+  "compress",
   done
   );
 });

@@ -1,5 +1,8 @@
 .footer-logo {
   margin: 0 75px;
+}
+
+.footer-logo[href="index.html"] {
   cursor: pointer;
 
   &:hover {
@@ -20,12 +23,12 @@
 @media #{$tablet-widths} {
   .footer-logo {
     margin: 0;
-    padding-top: 30px;
+    padding-top: 24px;
   }
 }
 
 @media #{$desktop-widths} {
   .footer-logo {
-    padding-top: 24px;
+    padding-top: 25px;
   }
 }

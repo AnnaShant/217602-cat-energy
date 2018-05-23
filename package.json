@@ -23,8 +23,8 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp style",
-    "start": "gulp serve"
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
   },
   "browserslist": [
     "last 2 versions",
@@ -47,6 +47,7 @@
     "express": "^4.16.3",
     "gulp-jsmin": "^0.1.5",
     "gulp-rename": "^1.2.3",
+    "gulp-uglify": "^3.0.0",
     "posthtml-include": "^1.1.0"
   }
 }
