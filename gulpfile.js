@@ -13,7 +13,7 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var run = require("run-sequence");
 var del = require("del");
-var uglify = require('gulp-uglify');
+var uglify = require("gulp-uglify");
 
 gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
