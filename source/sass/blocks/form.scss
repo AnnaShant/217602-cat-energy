@@ -120,7 +120,7 @@
 .form__title {
   position: relative;
 
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 
   font-size: 24px;
   line-height: 1;
@@ -255,7 +255,7 @@
 .form-option__item {
   position: relative;
 
-  padding-bottom: 12px;
+  padding-bottom: 13px;
 
   outline: none;
 }
@@ -400,7 +400,7 @@
       width: 200px;
       height: 3px;
 
-      top: 25px;
+      top: 20px;
       left: -645px;
 
       background-color: $color-btn;
@@ -411,7 +411,7 @@
     &::after {
       width: 200px;
 
-      top: 25px;
+      top: 20px;
       left: 275px;
 
       box-shadow: 200px 0 0  $color-btn, 300px 0 0  $color-btn, 400px 0 0  $color-btn;
@@ -499,15 +499,14 @@
   .form-option {
     margin-top: 52px;
     margin-bottom: 75px;
-    padding-top: 26px;
-    padding-bottom: 9px;
+    padding-top: 27px;
     padding-left: 28px;
 
     border: 1px solid #e6e6e6;
   }
 
   .form-option__item {
-    margin-bottom: 7px;
+    padding-bottom: 21px;
   }
 
   .form-option input + label {
@@ -718,12 +717,12 @@
   }
 
   .form-option {
-    margin-top: 0;
-    padding-left: 28px;
+    margin-top: -2px;
+    padding-left: 26px;
   }
 
   .form-option__item {
-    margin-top: -1px;
+    padding-bottom: 19px;
   }
 
   .form-option input + label {

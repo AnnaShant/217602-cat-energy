@@ -1,4 +1,4 @@
-.product-wrap__box {
+.products-wrap__more-box {
   position: relative;
 
   padding-top: 66px;
@@ -16,6 +16,8 @@
 }
 
 .products-wrap__more-title {
+  margin-bottom: 0;
+
   font-size: 16px;
   line-height: 1;
   font-weight: 400;
@@ -63,7 +65,7 @@
     padding-bottom: 10px;
   }
 
-  .product-wrap__box {
+  .products-wrap__more-box {
     width: 324px;
 
     margin-top: 116px;
@@ -106,11 +108,11 @@
 
 @media #{$desktop-widths} {
   .products-wrap__more,
-  .product-wrap__box {
+  .products-wrap__more-box {
     width: 245px;
   }
 
-  .product-wrap__box {
+  .products-wrap__more-box {
     padding: 0 40px;
 
     padding-top: 144px;

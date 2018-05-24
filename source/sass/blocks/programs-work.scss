@@ -1,5 +1,5 @@
 .programs-work {
-  padding-top: 26px;
+  padding-top: 27px;
   padding-bottom: 20px;
 }
 
@@ -122,11 +122,11 @@
 @media #{$desktop-widths} {
   .programs-work {
     border: none;
+    padding-bottom: 25px;
   }
 
   .programs-work__title {
     padding-top: 45px;
-    padding-bottom: 5px;
   }
 
   .programs-work__item {
